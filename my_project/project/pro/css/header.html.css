@@ -1,0 +1,25 @@
+.font_rigth_top{
+    font-size:1.2rem;
+}
+.color_rigth_top{
+    color:#c8cbcc;
+}
+.bg_black{
+    background-color:#000;
+}
+.font_left_top{
+    font-size:1rem;
+}
+.color_left_top{
+    color: #fff;
+}
+.my_bg_r1{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-150px 4px;
+}
+.my_bg_r2{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-150px 4px;
+}
