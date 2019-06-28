@@ -21,5 +21,25 @@
 .my_bg_r2{
     width:1rem;height:1.2rem;
     background:url(../img/icon-new.png);
-    background-position:-150px 4px;
+    background-position:-238px 7px;
+}
+.my_bg_r3{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-265px 7px;
+}
+
+@media (max-width: 767.98px) {
+    .d_sm_none{
+        display: none;
+}
+}
+
+
+.a_hover:hover{
+    text-decoration:none;
+    color:#c8cbcc;
+}
+.nav-link:hover, .nav-link:focus{
+    color:#c8cbcc;
 }
