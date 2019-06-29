@@ -28,6 +28,11 @@
     background:url(../img/icon-new.png);
     background-position:-265px 7px;
 }
+.my_bg_r4{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-353px -1px;
+}
 
 @media (max-width: 767.98px) {
     .d_sm_none{
