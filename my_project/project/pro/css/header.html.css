@@ -1,6 +1,3 @@
-.font_rigth_top{
-    font-size:1.2rem;
-}
 .color_rigth_top{
     color:#c8cbcc;
 }
@@ -8,10 +5,13 @@
     background-color:#000;
 }
 .font_left_top{
-    font-size:1rem;
+    font-size:1.3rem;
 }
-.color_left_top{
+.color_white{
     color: #fff;
+}
+.color_black{
+    color: #000;
 }
 .my_bg_r1{
     width:1rem;height:1.2rem;
@@ -28,6 +28,16 @@
     background:url(../img/icon-new.png);
     background-position:-265px 7px;
 }
+.my_bg_r4{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-353px -1px;
+}
+.my_bg_r5{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-492px -305px;
+}
 
 @media (max-width: 767.98px) {
     .d_sm_none{
@@ -42,4 +52,13 @@
 }
 .nav-link:hover, .nav-link:focus{
     color:#c8cbcc;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+}
+.input_outline_0{
+    outline:0;
+}
+.w-90 {
+    width: 90% !important;
 }

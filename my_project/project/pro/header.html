@@ -15,60 +15,134 @@
 </head>
 <body>
 <div class="container">
+    <!-- 顶部导航sm隐藏-->
     <ul class="nav nav-pills bg_black  d_sm_none justify-content-end">
         <li class="nav-item">
-            <a data-toggle="pill" href="#tab11" class="nav-link font_rigth_top color_rigth_top d-inline-block pr-0">订单追踪</a>
+            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-0 pb-1">订单追踪</a>
             <a href="#tab11" class="d-inline-block my_bg_r1 mr-3  "></a>
         </li>
         <li class="nav-item">
-            <a data-toggle="pill" href="#tab11" class="nav-link font_rigth_top color_rigth_top d-inline-block pr-0">帮助中心</a>
-            <a href="#tab11" class="a_hover font_rigth_top color_rigth_top">？</a>
+            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-0">帮助中心</a>
+            <a href="#tab11" class="a_hover  color_rigth_top">？</a>
         </li>
         <li class="nav-item">
-            <a data-toggle="pill" href="#tab11" class="nav-link font_rigth_top color_rigth_top d-inline-block pr-0">在线客服</a>
+            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-0">在线客服</a>
             <a href="#tab11" class="d-inline-block my_bg_r2 mr-3  "></a>
         </li>
         <li class="nav-item">
-            <a data-toggle="pill" href="#tab11" class="nav-link font_rigth_top color_rigth_top d-inline-block pr-0">登录</a>
+            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-0">登录</a>
             <a href="#tab11" class="d-inline-block my_bg_r3 mr-3  "></a>
         </li>
 
     </ul>
-
+    <!-- 顶部导航栏navbar-->
     <div class="navbar navbar-expand-md  navbar-dark bg_black text-sm-center pl-lg-5 pl-md-1">
-        <!-- 1-->
-        <!-- 2-->
+
+
+        <!-- 导航栏sm按钮样式-->
         <button class="navbar-toggler" data-toggle="collapse" data-target="#content">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- 3-->
+        <!-- 顶部logo图标-->
+        <div class="d-inline-block pb-3 px-2">
+            <a href="" class="">
+                <img src="img/logo-new.png" alt="" class=""/>
+            </a>
+
+        </div>
+
+        <!-- sm搜索图标-->
+        <div class="d-inline-block d-md-none d-lg-none" data-toggle="collapse" data-target="#my_ipt">
+            <a href="#" class="d-inline-block my_bg_r5 "></a>
+        </div>
+
+
+
+
+        <!-- 导航栏-->
         <div id="content" class="collapse navbar-collapse ">
+
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a href="" class="nav-link">男子</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">男子</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">女子</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">女子</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">儿童</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">儿童</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">|</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">|</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">运动</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">运动</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">品牌</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">品牌</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">精选系列</a>
+                    <a href="" class="nav-link font_left_top font-weight-bold">精选系列</a>
                 </li>
             </ul>
         </div>
+
+        <!-- 顶部lg md 搜索框-->
+        <div class="d-inline-block d-sm-none d-lg-block d-md-block" data-toggle="collapse" data-target="#my-ipt1">
+            <input type="text" class="input_outline_0" placeholder="抢YEEZY"/>
+        </div>
+
+        <!-- 顶部购物袋  lg md 显示  sm—none-->
+        <div class="d-inline-block d-sm-none d-lg-block d-md-block pl-5">
+            <a href="#" class="d-inline-block my_bg_r4 mr-1"></a>
+        </div>
+
     </div>
-    <div class="py-2 bg-secondary"></div>
+    <!-- sm搜索框-->
+    <div class="collapse d-md-none d-lg-none " id="my_ipt">
+        <div class="bg_black text-center" data-toggle="collapse" data-target="#my-ipt1" >
+                <input type="text" class="mb-1 w-90 input_outline_0" placeholder="抢YEEZY"/>
+        </div>
+    </div>
+    <!-- 搜索推荐导航-->
+    <div class="collapse" id="my-ipt1">
+        <div class="bg-white">
+            <p class="font-weight-bold">搜索推荐</p>
+            <ul class="nav justify-content-start">
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">抢YEEZY</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">4D</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">Clima</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">Nite JOGGER</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">Game of Thrones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">ultraboost</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">yung 96</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">superstar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">stan smith</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link color_black">三叶草</a>
+                </li>
+            </ul>
+            <p class="font-weight-bold">搜索记录</p>
+        </div>
+    </div>
 
 </div>
 </body>
