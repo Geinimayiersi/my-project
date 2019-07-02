@@ -62,3 +62,11 @@
 .w-90 {
     width: 90% !important;
 }
+/*¶¥²¿Í¼Æ¬ÌáÊ¾¿ò²æ²æ*/
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.1rem 1.5rem;
+    color: inherit;
+}
