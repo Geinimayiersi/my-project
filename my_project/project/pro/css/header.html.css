@@ -4,8 +4,17 @@
 .bg_black{
     background-color:#000;
 }
+.bg_dark{
+    background-color:#1b1b1b;
+}
 .font_left_top{
     font-size:1.3rem;
+}
+.font_0-8{
+    font-size:0.8rem;
+}
+.font_1-2{
+    font-size:1.2rem;
 }
 .color_white{
     color: #fff;
@@ -37,6 +46,16 @@
     width:1.5rem;height:1.5rem;
     background:url(../img/icon@2x1.png);
     background-position:-492px -305px;
+}
+.my_bg_r6{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-218px -338px;
+}
+.my_bg_r7{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-599px -338px;
 }
 
 @media (max-width: 767.98px) {
