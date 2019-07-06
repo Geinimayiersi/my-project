@@ -1,5 +1,5 @@
-.font_rigth_top{
-    font-size:1.2rem;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color:transparent;
 }
 .color_rigth_top{
     color:#c8cbcc;
@@ -7,11 +7,23 @@
 .bg_black{
     background-color:#000;
 }
-.font_left_top{
-    font-size:1rem;
+.bg_dark{
+    background-color:#1b1b1b;
 }
-.color_left_top{
+.font_left_top{
+    font-size:1.3rem;
+}
+.font_0-8{
+    font-size:0.8rem;
+}
+.font_1-2{
+    font-size:1.2rem;
+}
+.color_white{
     color: #fff;
+}
+.color_black{
+    color: #000;
 }
 .my_bg_r1{
     width:1rem;height:1.2rem;
@@ -33,6 +45,26 @@
     background:url(../img/icon-new.png);
     background-position:-353px -1px;
 }
+.my_bg_r5{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-492px -305px;
+}
+.my_bg_r6{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-218px -338px;
+}
+.my_bg_r7{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-599px -338px;
+}
+.my_bg_r8{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-324px -341px;
+}
 
 @media (max-width: 767.98px) {
     .d_sm_none{
@@ -47,4 +79,36 @@
 }
 .nav-link:hover, .nav-link:focus{
     color:#c8cbcc;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+}
+.input_outline_0{
+    outline:0;
+}
+.w-90 {
+    width: 90% !important;
+}
+/*顶部图片提示框叉叉*/
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.1rem 1.5rem;
+    color: inherit;
+}
+/*hover导航栏sm none 下面的 a标签 字体样式*/
+#c1 a:hover{
+    color:#000;
+}
+#c1 a{
+    color:#000;
+    font-size:0.8rem;
+}#c2 a:hover{
+    color:#000;
+}
+#c2 a{
+    text-decoration:underline;
+    color:#000;
+    font-size:1rem;
 }
