@@ -165,7 +165,7 @@
 .w-90 {
     width: 90% !important;
 }
-/*¶¥²¿Í¼Æ¬ÌáÊ¾¿ò²æ²æ*/
+/*é¡¶éƒ¨å›¾ç‰‡æç¤ºæ¡†å‰å‰*/
 .alert-dismissible .close {
     position: absolute;
     top: 0;
@@ -173,7 +173,7 @@
     padding: 0.1rem 1.5rem;
     color: inherit;
 }
-/*hoverµ¼º½À¸sm none ÏÂÃæµÄ a±êÇ© ×ÖÌåÑùÊ½*/
+/*hoverå¯¼èˆªæ sm none ä¸‹é¢çš„ aæ ‡ç­¾ å­—ä½“æ ·å¼*/
 #c1 a:hover{
     color:#000;
 }
@@ -228,4 +228,21 @@
     color:#d0d0cf;
     font-size:0.8rem;
 }
+
+
+.btn{
+    border-radius: 0;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
+.btn:hover{
+    border-radius: 0;
+    border: none;
+    color:#aaa;
+    background-color: #000;
+}
+
+
+
 
