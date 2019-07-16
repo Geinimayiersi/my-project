@@ -244,14 +244,31 @@
 }
 .r1{
     position: absolute;
-    left: 3px;
-    top:3px;
+    left: 50%;
+    top:50%;
 }
 .r1 div{
     position: absolute;
     width:100%;height:100%;
-    left:3px;top:3px;
-    border:1px solid #000;
+    left:1px;top:1px;
+    border:1px solid red;
+
+
+}
+.btn_a1{
+    display:inline-block;
+    padding: 0rem 0.75rem;
+    background-color:red;
+    line-height:2.7rem;;
+    text-align:center;
+    color:#fff;
+    font-size:1.2rem;
+    cursor:pointer;
+    text-decoration:none;
+}
+.btn_a1:hover{
+    text-decoration:none;
+    color:#aaa;
 }
 
 
