@@ -228,11 +228,7 @@
     color:#d0d0cf;
     font-size:0.8rem;
 }
-.r1{
-    position: absolute;
-    left: 10%;
-    top:70%;
-}
+
 
 .r1+.r1{
     margin-top: 4rem;
@@ -277,42 +273,98 @@
     text-decoration:none;
     color:#aaa;
 }
-.btn_loc1>.r1{
-    position: absolute;
-    left: 84%;
-    top:65%;
-}
+/*大屏*/
+@media (min-width: 992px) {
+    .r1{
+        position: absolute;
+        left: 10%;
+        top:70%;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 84%;
+        top:65%;
+    }
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 41%;
+        top:82%;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 10%;
+        top:60%;
+    }
 
-.btn_loc2 .r1{
-    position: absolute;
-    left: 41%;
-    top:82%;
 }
-.btn_loc3 .r1{
-    position: absolute;
-    left: 10%;
-    top:60%;
+/*控制btn位置lg md sm*/
+/*中屏*/
+@media (min-width: 768px) and (max-width:991px){
+    .r1{
+        position: absolute;
+        left: 6%;
+        top:60%;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 75%;
+        top:55%;
+    }
+
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 35%;
+        top:75%;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 6%;
+        top:55%;
+    }
 }
+/*小屏*/
+@media (max-width:767px){
+    .r1{
+        position: absolute;
+        left: 5%;
+        top:55%;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 65%;
+        top:55%;
+    }
 
-
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 39%;
+        top:82%;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 5%;
+        top:52%;
+    }
+}
 .bg_z-index-1{
     position: relative;
     z-index:-1;
 }
 .col-lg-6  div>.d-block:hover{
-    box-shadow: 0px 2px  5px 1px #888888;
+    box-shadow: 0 2px  5px 1px #888888;
     transition: all .3s  linear;
 }
-.my-5>.p-0>div>a:hover{
-    border:1px solid #c6c6c6;
+
+#boxs a:hover{
+    box-shadow:0 0 0 1px #c6c6c6;
     transition: all .5s  linear;
 }
-.my-5>.p-0>div a,p{
+#boxs a,p{
     color:#c6c6c6;
     text-decoration:none;
 
 }
-.my-5>.p-0>div p:hover{
+#boxs p:hover{
     color:#c6c6c6;
     text-decoration:underline ;
 
@@ -321,10 +373,53 @@
     left:50%;
     margin-left:-78px;
 }
-.position-relative.mt-4+h3:before{
-    content: "";
-    display: block;
-    height: 3rem;
+.Carousel_p a,p{
+    color:#000;
+    font-size:0.8rem;
+}
+.Carousel_p span{
+    background-color: #fff;
+    padding: .4rem .2rem;
+    position: absolute;
+    left: 5%;
+    top:5%;
+    text-align: center;
+    font-size: 0.8rem;
+
+}
+.Carousel_p a:hover{
+    color:#025f8e;
+    text-decoration: none;
+}
+.Carousel_p:hover{
+    box-shadow:0 0 0 1px #c6c6c6 inset;
+    transition: all .5s  linear;
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width:4%;height:20%;
+    top: 40%;
+    background-color:#aaa;
+    border-radius: 0.25rem;
+}
+.carousel-indicators li{
+    background:#aaa;
+    margin-right:6px;
+    margin-left:6px;
+}
+.carousel-indicators .active{
+    background:#000;
+}
+.carousel-control-prev, .carousel-control-next{
+    top:28%;
+    width: 2%;height: 10%;
+    border-radius:0;
+}
+.carousel-indicators{
+    bottom:-7%;
+}
+.mx-12{
+    margin:0 12rem;
 }
 
 
