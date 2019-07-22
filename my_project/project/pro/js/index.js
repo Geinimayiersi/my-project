@@ -1,3 +1,9 @@
-$(".container #box1").hover(function(){
+$("#box1").hover(function(){
 			$("#box2").toggle();
+})
+$("#box2").mouseenter(function(){
+	$("#box2").css("display","block")
+})
+$("#box2").mouseleave(function(){
+	$("#box2").css("display","none")
 })
