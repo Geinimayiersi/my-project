@@ -11,8 +11,13 @@
 .bg_dark{
     background-color:#1b1b1b;
 }
-.font_left_top{
-    font-size:1.3rem;
+.navbar .navbar-nav .nav-item .nav-link{
+    font-size:1.2rem;
+    color:#fff;
+}
+.navbar .navbar .nav-item .nav-link input{
+    align:right;
+    outline:0;
 }
 .font_0-8{
     font-size:0.8rem;
