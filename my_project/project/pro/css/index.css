@@ -158,6 +158,10 @@
 .input_outline_0{
     outline:0;
 }
+.fa{
+    position: absolute;
+    right: 0px;
+}
 .w-90 {
     width: 90% !important;
 }
@@ -343,6 +347,12 @@
         position: absolute;
         left: 5%;
         top:52%;
+    }
+    .log_loc{
+        position: absolute;
+        left:45%;
+        top:10%;
+        z-index: 999;
     }
 }
 .bg_z-index-1{
