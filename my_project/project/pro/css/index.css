@@ -53,7 +53,7 @@
 .my_bg_r5{
     width:1.5rem;height:1.5rem;
     background:url(../img/icon@2x1.png);
-    background-position:-492px -305px;
+    background-position:-492px -307px;
 }
 .my_bg_r6{
     width:1.5rem;height:1.5rem;
@@ -351,7 +351,7 @@
     .log_loc{
         position: absolute;
         left:45%;
-        top:10%;
+        top:99%;
         z-index: 999;
     }
 }
