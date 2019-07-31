@@ -9,5 +9,5 @@ $("#box2").mouseleave(function(){
 });
 $("#buts1").click(function(){
 	$("#my_ipt").removeClass("show");
-	if($("#ssou").has("d-sm-none"))
+	$("#ssuo").toggle();
 })
