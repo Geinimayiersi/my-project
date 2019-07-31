@@ -11,8 +11,9 @@
 .bg_dark{
     background-color:#1b1b1b;
 }
-.font_left_top{
-    font-size:1.3rem;
+.navbar .navbar-nav .nav-item .nav-link{
+    font-size:1.2rem;
+    color: #fff;
 }
 .font_0-8{
     font-size:0.8rem;
@@ -141,13 +142,6 @@
     background-position:-552px -380px;
 }
 
-
-
-@media (max-width: 767.98px) {
-    .d_sm_none{
-        display: none;
-    }
-}
 .d_none{
     display:none;
 }
@@ -160,9 +154,7 @@
 .nav-link:hover, .nav-link:focus{
     color:#c8cbcc;
 }
-.navbar-dark .navbar-nav .nav-link{
-    color: #fff;
-}
+
 .input_outline_0{
     outline:0;
 }
@@ -328,6 +320,9 @@
 }
 /*小屏*/
 @media (max-width:767px){
+    .d_sm_none{
+        display: none;
+    }
     .r1{
         position: absolute;
         left: 5%;
