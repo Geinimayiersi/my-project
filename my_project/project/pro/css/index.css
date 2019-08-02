@@ -1,7 +1,10 @@
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     background-color:transparent;
 }
-
+/*头部去边框*/
+.alert{
+    border:0;
+}
 .color_rigth_top{
     color:#c8cbcc;
 }
@@ -297,6 +300,9 @@
         left: 10%;
         top:60%;
     }
+    #ssuo{
+        display:none;
+    }
 
 }
 /*控制btn位置lg md sm*/
@@ -322,6 +328,9 @@
         position: absolute;
         left: 6%;
         top:55%;
+    }
+    #ssuo{
+        display:none;
     }
 }
 /*小屏*/
@@ -356,6 +365,10 @@
         top:99%;
         z-index: 999;
     }
+    #ssuo{
+        display:inline-block;
+    }
+
 }
 .bg_z-index-1{
     position: relative;
@@ -429,14 +442,13 @@
 .carousel-indicators{
     bottom:-7%;
 }
-
-#ssuo{
+#ssuo a{
     display:inline-block;
 }
-
-
-
-
-
+.flex-container{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 14rem;
+}
 
 

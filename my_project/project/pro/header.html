@@ -11,19 +11,18 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- 头部图图片提示框-->
-    <div class="alert alert-dismissible py-0 px-0 my-0">
-        <span class="close" data-dismiss="alert">&times;</span>
-        <a href="" class="">
-            <img src="img/top-pc-sale.jpg" alt="" class="w-100"/>
-        </a>
-    </div>
-    <!-- 顶部导航sm隐藏-->
-    <div class="px-lg-5 bg_black">
+    <div class="position-fixed header">
+        <!-- 头部图图片提示框-->
+        <div class="alert alert-dismissible py-0 px-0 my-0">
+            <span class="close" data-dismiss="alert">&times;</span>
+            <a href="" class="">
+                <img src="img/top-pc-sale.jpg" alt="" class="w-100"/>
+            </a>
+        </div>
+        <!-- 顶部导航sm隐藏-->
         <div class="px-lg-5 bg_black">
             <div class="px-lg-5 bg_black">
                 <div class="px-lg-5 bg_black">
-
                     <ul class="nav nav-pills bg_black  d_sm_none justify-content-end">
                         <li class="nav-item">
                             <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-0 pb-1">订单追踪</a>
@@ -47,9 +46,8 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="px-lg-5 bg_black ">
+        <!-- 顶部导航栏navbar-->
         <div class="px-lg-5 bg_black">
             <div class="px-lg-5 bg_black">
                 <div class="px-lg-5 bg_black">
@@ -69,8 +67,8 @@
                                 </div>
                                 <div class="float-sm-right">
                                     <!-- sm搜索图标-->
-                                    <div id="ssuo" class="px-2 " data-toggle="collapse" data-target="#my_ipt" >
-                                        <a href="#" class="d-inline-block my_bg_r5 align-middle "></a>
+                                    <div id="ssuo" class="px-2" data-toggle="collapse" data-target="#my_ipt" >
+                                        <a href="#" class="my_bg_r5 align-middle "></a>
                                     </div>
 
                                     <!-- 顶部购物袋  lg md 显示  sm—none-->
@@ -267,156 +265,193 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-
-    <!-- sm搜索框 w100-->
-    <div class="collapse d-md-none d-lg-none " id="my_ipt">
-        <div class="bg_black text-center" data-toggle="collapse" data-target="#my-ipt1" >
-            <input type="text" class="mb-1 w-90 input_outline_0 " placeholder="抢YEEZY"/>
-        </div>
-    </div>
-    <!-- 搜索推荐导航-->
-    <div class="collapse position-absolute w-100" id="my-ipt1">
-        <div class="bg-white">
-            <p class="font-weight-bold">搜索推荐</p>
-            <ul class="nav justify-content-start">
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">抢YEEZY</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">4D</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">Clima</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">Nite JOGGER</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">Game of Thrones</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">ultraboost</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">yung 96</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">superstar</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">stan smith</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link color_black">三叶草</a>
-                </li>
-            </ul>
-            <p class="font-weight-bold">搜索记录</p>
-        </div>
-    </div>
-
-    <!-- hover导航栏sm none-->
-    <div class="bg-white position-absolute w-100 d_none" id="box2">
-        <div class="row mx-0 d_sm_none px-5"  id="c1">
-            <div class="col-10 p-0 mt-2">
-                <div class="row mx-0">
-                    <div class="col-3 p-0">
-                        <h6 class="font-weight-bold">精选推荐</h6>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="">全部男子折扣</a></li>
-                            <li class=""><a href="">全新上市</a></li>
-                            <li class=""><a href="">新品发售日历</a>
-                                <sup class="text-success font_0-8 font-weight-bold">NEW</sup>
-                            </li>
-                            <li class=""><a href="">限量发售</a></li>
-                            <li class=""><a href="">本周热卖</a></li>
-                            <li class="w-25"><hr/></li>
-                            <li class=""><a href="">YEEZY</a></li>
-                            <li class=""><a href="">Originals|adicolor.</a></li>
-                            <li class=""><a href="">Originals|EQT GAZELLE</a></li>
-                            <li class=""><a href="">adidas neo|生来好动</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-3 p-0">
-                        <h6 class="font-weight-bold">鞋类</h6>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="">Originals</a></li>
-                            <li class=""><a href="">跑步</a></li>
-                            <li class=""><a href="">帆布/滑板</a></li>
-                            <li class=""><a href="">拖鞋/凉鞋</a></li>
-                            <li class=""><a href="">复古/老爹鞋</a></li>
-                            <li class=""><a href="">adidas neo</a></li>
-                            <li class=""><a href="">篮球</a></li>
-                            <li class=""><a href="">足球</a></li>
-                            <li class=""><a href="">户外</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-3 p-0">
-                        <h6 class="font-weight-bold">服饰类</h6>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="">短袖T恤/上衣</a></li>
-                            <li class=""><a href="">POLO衫</a></li>
-                            <li class=""><a href="">卫衣/套头衫</a></li>
-                            <li class=""><a href="">夹克/外套</a></li>
-                            <li class=""><a href="">短裤</a></li>
-                            <li class=""><a href="">长裤/运动裤</a></li>
-                            <li class=""><a href="">比赛服</a></li>
-                            <li class=""><a href="">泳裤</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-3 p-0">
-                        <h6 class="font-weight-bold">附配件类</h6>
-                        <ul class="list-unstyled">
-                            <li class=""><a href="">包</a></li>
-                            <li class=""><a href="">袜子</a></li>
-                            <li class=""><a href="">帽子/手套/围巾</a></li>
-                            <li class=""><a href="">足球/篮球</a></li>
-                            <li class=""><a href="">运动装备</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-2 p-0 ">
-                <a href="#" class="d-inline-block my_bg_r8 mr-1"></a>
-                <h6 class="d-inline-block font-weight-bold">个性印制产品</h6>
-                <ul class="list-unstyled">
-                    <li class=""><a href=""><img src="img/15211227486009014.png" alt=""/></a></li>
-                    <li class=""><a href="">
-                        足球个性印制产品</a></li>
-                    <li class=""><a href="">
-                        Originals 个性印制产品</a></li>
-                    <li class=""><a href="">
-                        adidasneo个性印制产品</a></li>
-                    <li class=""><a href="">
-                        个性化印制球衣</a></li>
-                </ul>
+        <!-- sm搜索框 w100-->
+        <div class="collapse d-md-none d-lg-none " id="my_ipt">
+            <div class="bg_black text-center" data-toggle="collapse" data-target="#my-ipt1" >
+                <input type="text" class="mb-1 w-90 input_outline_0 " placeholder="抢YEEZY"/>
             </div>
         </div>
-        <div class="row mx-0 d_sm_none px-5 py-5" id="c2">
-            <div class="col-9 p-0">
-                <div class="row mx-0">
-                    <div class="col-3 p-0">
-                        <a href="" class="font-weight-bold">男子全部产品</a>
-                    </div>
-                    <div class="col-3 p-0">
-                        <a href="" class="font-weight-bold">全部男子鞋</a>
-                    </div>
-                    <div class="col-3 p-0">
-                        <a href="" class="font-weight-bold">全部男子服饰</a>
-                    </div>
-                    <div class="col-3 p-0">
-                        <a href="" class="font-weight-bold">全部男子配件</a>
-                    </div>
+        <!-- 搜索推荐导航-->
+        <div class="flex-container">
+            <div class="collapse position-absolute" id="my-ipt1">
+                <div class="bg-white p-3">
+                    <p class="font-weight-bold">搜索推荐</p>
+                    <ul class="nav justify-content-start">
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">抢YEEZY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">4D</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">Clima</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">Nite JOGGER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">Game of Thrones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">ultraboost</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">yung 96</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">superstar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">stan smith</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link color_black">三叶草</a>
+                        </li>
+                    </ul>
+                    <p class="font-weight-bold">搜索记录</p>
                 </div>
             </div>
-            <div class="col-3 p-0">
-                <a href="" class="font-weight-bold">全部男子个性印制产品</a>
+        </div>
+
+
+
+        <!-- hover导航栏sm none-->
+        <div class="bg-white position-absolute w-100 d_none px-lg-5" id="box2">
+            <div class="px-lg-5">
+                <div class="px-lg-5">
+                    <div class="row mx-0 d_sm_none px-5"  id="c1">
+                        <div class="col-10 p-0 mt-2">
+                            <div class="row mx-0">
+                                <div class="col-3 p-0">
+                                    <h6 class="font-weight-bold">精选推荐</h6>
+                                    <ul class="list-unstyled">
+                                        <li class=""><a href="">全部男子折扣</a></li>
+                                        <li class=""><a href="">全新上市</a></li>
+                                        <li class=""><a href="">新品发售日历</a>
+                                            <sup class="text-success font_0-8 font-weight-bold">NEW</sup>
+                                        </li>
+                                        <li class=""><a href="">限量发售</a></li>
+                                        <li class=""><a href="">本周热卖</a></li>
+                                        <li class="w-25"><hr/></li>
+                                        <li class=""><a href="">YEEZY</a></li>
+                                        <li class=""><a href="">Originals|adicolor.</a></li>
+                                        <li class=""><a href="">Originals|EQT GAZELLE</a></li>
+                                        <li class=""><a href="">adidas neo|生来好动</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <h6 class="font-weight-bold">鞋类</h6>
+                                    <ul class="list-unstyled">
+                                        <li class=""><a href="">Originals</a></li>
+                                        <li class=""><a href="">跑步</a></li>
+                                        <li class=""><a href="">帆布/滑板</a></li>
+                                        <li class=""><a href="">拖鞋/凉鞋</a></li>
+                                        <li class=""><a href="">复古/老爹鞋</a></li>
+                                        <li class=""><a href="">adidas neo</a></li>
+                                        <li class=""><a href="">篮球</a></li>
+                                        <li class=""><a href="">足球</a></li>
+                                        <li class=""><a href="">户外</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <h6 class="font-weight-bold">服饰类</h6>
+                                    <ul class="list-unstyled">
+                                        <li class=""><a href="">短袖T恤/上衣</a></li>
+                                        <li class=""><a href="">POLO衫</a></li>
+                                        <li class=""><a href="">卫衣/套头衫</a></li>
+                                        <li class=""><a href="">夹克/外套</a></li>
+                                        <li class=""><a href="">短裤</a></li>
+                                        <li class=""><a href="">长裤/运动裤</a></li>
+                                        <li class=""><a href="">比赛服</a></li>
+                                        <li class=""><a href="">泳裤</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <h6 class="font-weight-bold">附配件类</h6>
+                                    <ul class="list-unstyled">
+                                        <li class=""><a href="">包</a></li>
+                                        <li class=""><a href="">袜子</a></li>
+                                        <li class=""><a href="">帽子/手套/围巾</a></li>
+                                        <li class=""><a href="">足球/篮球</a></li>
+                                        <li class=""><a href="">运动装备</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-2 p-0 ">
+                            <a href="#" class="d-inline-block my_bg_r8 mr-1"></a>
+                            <h6 class="d-inline-block font-weight-bold">个性印制产品</h6>
+                            <ul class="list-unstyled">
+                                <li class=""><a href=""><img src="img/15211227486009014.png" alt=""/></a></li>
+                                <li class=""><a href="">
+                                    足球个性印制产品</a></li>
+                                <li class=""><a href="">
+                                    Originals 个性印制产品</a></li>
+                                <li class=""><a href="">
+                                    adidasneo个性印制产品</a></li>
+                                <li class=""><a href="">
+                                    个性化印制球衣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mx-0 d_sm_none px-5 py-5" id="c2">
+                        <div class="col-9 p-0">
+                            <div class="row mx-0">
+                                <div class="col-3 p-0">
+                                    <a href="" class="font-weight-bold">男子全部产品</a>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <a href="" class="font-weight-bold">全部男子鞋</a>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <a href="" class="font-weight-bold">全部男子服饰</a>
+                                </div>
+                                <div class="col-3 p-0">
+                                    <a href="" class="font-weight-bold">全部男子配件</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 p-0">
+                            <a href="" class="font-weight-bold">全部男子个性印制产品</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    <div class="mh"></div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">5555555555555555555555555555</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
+    <div class="bg-danger py-5">
+        <h1 class="text-primary">1212121211111111111111111111</h1>
+    </div>
 
 <script src="../js/jquery-3.2.1.js"></script>
 <script src="js/index.js"></script>
