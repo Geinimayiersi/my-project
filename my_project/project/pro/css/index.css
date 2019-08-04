@@ -149,7 +149,7 @@
 .my_bg_r22{
     width:1.2rem;height:1.2rem;
     background:url(../img/icon@2x1.png);
-    background-position:-552px -380px;
+    background-position:-556px -380px;
 }
 .my_bg_r23{
     width:2.6rem;height:2.6rem;
@@ -342,7 +342,7 @@
     }
 
     .p-3.float-lg-right.float-md-right.float-sm-none,.p-3.float-lg-left.float-md-left.float-sm-none{
-        width: 90%;
+        width: 60%;
     }
 
 }
@@ -582,6 +582,19 @@
 
 .mycheck input[type=checkbox]:checked + label:after {
     opacity: 1;
+}
+
+/*--------------------iframe--------------*/
+.my_header,.my_footer{ width:100%;}
+/*大屏幕下iframe的高度 */
+@media (min-width: 992px) {
+    .my_header{height: 5.5rem;}
+    .my_footer{height:22rem;}
+}
+/*小屏和中屏iframe的高度*/
+@media (max-width: 991px) and (min-width: 576px){
+    .my_header{height:11rem;}
+    .my_footer{height:38rem;}
 }
 
 
