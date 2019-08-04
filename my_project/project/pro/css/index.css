@@ -53,6 +53,12 @@
     background:url(../img/icon-new.png);
     background-position:-353px -1px;
 }
+.my_bg_r4:hover{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-353px -1px;
+    color: #6610f2;
+}
 .my_bg_r5{
     width:1.5rem;height:1.5rem;
     background:url(../img/icon@2x1.png);
@@ -303,6 +309,10 @@
     #ssuo{
         display:none;
     }
+    .flex-container>#my-ipt1{
+        width:330px;
+        right:182px;
+    }
 
 }
 /*控制btn位置lg md sm*/
@@ -332,6 +342,10 @@
     #ssuo{
         display:none;
     }
+    .flex-container>#my-ipt1{
+        width:330px;
+        right:40px;
+    }
 }
 /*小屏*/
 @media (max-width:767px){
@@ -341,12 +355,12 @@
     .r1{
         position: absolute;
         left: 5%;
-        top:55%;
+        top:42%;
     }
     .btn_loc1>.r1{
         position: absolute;
         left: 65%;
-        top:55%;
+        top:42%;
     }
 
     .btn_loc2 .r1{
@@ -357,7 +371,7 @@
     .btn_loc3 .r1{
         position: absolute;
         left: 5%;
-        top:52%;
+        top:42%;
     }
     .log_loc{
         position: absolute;
@@ -448,7 +462,9 @@
 .flex-container{
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 14rem;
 }
+
+
+
 
 

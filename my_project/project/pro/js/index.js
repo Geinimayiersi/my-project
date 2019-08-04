@@ -1,4 +1,5 @@
 $(function(){
+	//----------------------------------------头部-------------------------------------
 	//搜索推荐鼠标悬停block
 	$("#box1").hover(function(){
 				$("#box2").toggle();
@@ -14,7 +15,12 @@ $(function(){
 	//jquery sm搜索点击 shou显示并隐藏
 	$("#buts1").click(function(){
 		$("#my_ipt").removeClass("show");
+		$("#my-ipt1").removeClass("show");
 		$("#ssuo").toggle();
+	});
+	//window = 搜索sm图标 onclick 隐藏 sm搜索推荐
+	($(window)||$("#ssuo")).click(function(){
+		$("#my-ipt1").removeClass("show");
 	});
 	/*头部fixed */
 	function changeHeight(){
@@ -24,6 +30,7 @@ $(function(){
 	$(window).resize(changeHeight);
 	// 页面加载完成时调用获取高度
 	changeHeight();
+	//----------------------------------------头部 完-------------------------------------
 })
 
 
