@@ -1,0 +1,150 @@
+/*      高度坍塌*/
+.float-clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*纯黑背景色*/
+.bg_black{
+    background-color:#000;
+}
+/*字体样式1rem*/
+.font_1{
+    font-size:1rem;
+}
+/* 背景雪碧图*/
+.my_bg_r1{
+    width:1rem;height:1.2rem;
+    background:url(../img/icon-new.png);
+    background-position:-150px 0px;
+}
+.my_bg_r9{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-633px -419px;
+}
+.my_bg_r10{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-559px -344px;
+}
+.my_bg_r11{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-419px -683px;
+}
+.my_bg_r12{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-385px -686px;
+}
+.my_bg_r13{
+    width:2.5rem;height:2.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-453px -686px;
+}
+.my_bg_r14{
+    width:2.5rem;height:2.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-500px -686px;
+}
+.my_bg_r15{
+    width:2.5rem;height:2.5rem;
+    background:url(../img/icon-new.png);
+    background-position:356px -26px;
+}
+.my_bg_r16{
+    width:5rem;height:2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-594px -479px;
+}
+.my_bg_r17{
+    width:8rem;height:2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-686px -479px;
+}
+.my_bg_r18{
+    width:7rem;height:2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-465px -479px;
+}
+.my_bg_r19{
+    width:7rem;height:2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-683px -518px;
+}
+.my_bg_r20{
+    width:1.5rem;height:1.5rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-383px -342px;
+}
+.my_bg_r21{
+    width:1.2rem;height:1.2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-591px -380px;
+}
+.my_bg_r22{
+    width:1.2rem;height:1.2rem;
+    background:url(../img/icon@2x1.png);
+    background-position:-556px -380px;
+}
+/* a标签hover字体颜色 淡白*/
+.a_hover2:hover{
+    color:#c8cbcc;
+}
+
+
+/* footer 产品字体样式*/
+
+#d1 a:hover{
+    color:#000;
+    text-decoration: none;
+}
+#d1 a{
+    color:#000;
+    font-size:.8rem;
+}
+#d2 a:hover{
+    color:#000;
+}
+#d2 a{
+    color:#000;
+    font-size:.8rem;
+}
+
+/* footer 雪碧字体 样式*/
+#e1 a:hover{
+    text-decoration: none;
+}
+#e1 a{
+    color:#d0d0cf;
+    font-size:.8rem;
+}
+#f1 a:hover{
+    text-decoration: none;
+}
+#f1 a{
+    color:#fff;
+    font-size:1rem;
+}
+#f1 a:hover{
+    text-decoration: none;
+}
+#f1 a{
+    color:#d0d0cf;
+    font-size:.8rem;
+}
+
+/* footer 面包屑*/
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
+}
+
+/*media媒体 小屏*/
+@media (max-width:767px){
+    .d_sm_none{
+        display: none;
+    }
+
+}

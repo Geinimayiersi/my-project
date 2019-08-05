@@ -1,0 +1,239 @@
+/*      高度坍塌*/
+.float-clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*纯黑背景色*/
+.bg_black{
+    background-color:#000;
+}
+/* 按钮样式*/
+.r1+.r1{
+    margin-top: 4rem;
+}
+.r2+.r2{
+    margin-top: 4rem;
+}
+.r1>div{
+    position: absolute;
+    width:100%;height:100%;
+    left:3px;top:3px;
+    box-shadow:inset 0 0 0 1px #000;
+    z-index:-1;
+}
+.r2>div{
+    box-shadow:inset 0 0 0 1px #fff;
+    z-index:22;
+}
+/* 按钮样式*/
+.btn_a1{
+    display:inline-block;
+    padding: 0 0.75rem;
+    background-color:#000;
+    line-height:2.7rem;
+    text-align:center;
+    color:#fff;
+    font-size:.9rem;
+    cursor:pointer;
+    text-decoration:none;
+    letter-spacing:3px;
+    padding: 0 1.3rem;
+    z-index:-1;
+}
+/* 按钮样式*/
+.btn_a1:hover{
+    text-decoration:none;
+    color:#aaa;
+    z-index:-1;
+}
+/* 按钮样式*/
+.btn_a2{
+    background-color:#fff;
+    color:#000;
+    z-index:-1;
+}
+/* 按钮样式*/
+.btn_a2:hover{
+    text-decoration:none;
+    color:#aaa;
+    z-index:-1;
+}
+/*media媒体 大屏*/
+@media (min-width: 992px) {
+    /*控制btn位置lg md sm*/
+    .r1{
+        position: absolute;
+        left: 10%;
+        top:70%;
+        z-index:-1;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 84%;
+        top:65%;
+        z-index:-1;
+    }
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 41%;
+        top:82%;
+        z-index:-1;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 10%;
+        top:60%;
+        z-index:-1;
+    }
+}
+
+/*media媒体 中屏*/
+@media (min-width: 768px) and (max-width:991px){
+    /*控制btn位置lg md sm*/
+    .r1{
+        position: absolute;
+        left: 6%;
+        top:60%;
+        z-index:-1;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 75%;
+        top:55%;
+        z-index:-1;
+    }
+
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 35%;
+        top:75%;
+        z-index:-1;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 6%;
+        top:55%;
+        z-index:-1;
+    }
+
+}
+/*media媒体 小屏*/
+@media (max-width:767px){
+    .r1{
+        position: absolute;
+        left: 5%;
+        top:42%;
+        z-index:-1;
+    }
+    .btn_loc1>.r1{
+        position: absolute;
+        left: 65%;
+        top:42%;
+        z-index:-1;
+    }
+
+    .btn_loc2 .r1{
+        position: absolute;
+        left: 39%;
+        top:82%;
+        z-index:-1;
+    }
+    .btn_loc3 .r1{
+        position: absolute;
+        left: 5%;
+        top:42%;
+        z-index:-1;
+    }
+
+}
+.bg_z-index-1{
+    position: relative;
+    z-index:-1;
+}
+/* lg-6 md-6 图片阴影*/
+.col-lg-6  div>.d-block:hover{
+    box-shadow: 0 2px  5px 1px #888888;
+    transition: all .3s  linear;
+    z-index:-1;
+}
+/* index 图片3-4 阴影*/
+#boxs a:hover{
+    box-shadow:0 0 0 1px #c6c6c6;
+    transition: all .5s  linear;
+    z-index:-1;
+}
+/* 图片3-4 字体 淡黑 去下划线*/
+#boxs a,p{
+    color:#c6c6c6;
+    text-decoration:none;
+
+}
+/* 图片3-4 字体 淡黑 houver +下划线*/
+#boxs p:hover{
+    color:#c6c6c6;
+    text-decoration:underline ;
+
+}
+/* width 按钮 50%*/
+.btn_loc4 .r1{
+    left:50%;
+    margin-left:-78px;
+}
+/*---------- 轮播 字体 颜色 样式---------------*/
+.Carousel_p a,p{
+    color:#000;
+    font-size:.8rem;
+}
+.Carousel_p span{
+    background-color: #fff;
+    padding: .4rem .2rem;
+    position: absolute;
+    left: 5%;
+    top:5%;
+    text-align: center;
+    font-size: .8rem;
+
+}
+.Carousel_p a:hover{
+    color:#025f8e;
+    text-decoration: none;
+}
+.Carousel_p:hover{
+    box-shadow:0 0 0 1px #c6c6c6 inset;
+    transition: all .5s  linear;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:4%;height:20%;
+    top: 40%;
+    background-color:#aaa;
+    border-radius: .25rem;
+}
+.carousel-indicators li{
+    background:#aaa;
+    margin-right:6px;
+    margin-left:6px;
+}
+.carousel-indicators .active{
+    background:#000;
+}
+.carousel-control-prev, .carousel-control-next{
+    top:28%;
+    width: 2%;height: 10%;
+    border-radius:0;
+}
+.carousel-indicators{
+    bottom:-7%;
+}
+/*---------- 轮播 字体 颜色 样式---------------*/
+
+
+
+
+
+
+
+
