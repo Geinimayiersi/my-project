@@ -4,7 +4,9 @@
     display: block;
     clear: both;
 }
-
+.z_index_999{
+    z-index:999;
+}
 /*纯黑背景色*/
 .bg_black{
     background-color:#000;

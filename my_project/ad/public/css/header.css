@@ -22,6 +22,9 @@
 .alert{
     border:0;
 }
+.z_index_999{
+    z-index:999;
+}
 /*右上角字体 灰色 */
 .color_rigth_top{
     color:#c8cbcc;
