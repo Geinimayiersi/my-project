@@ -10,32 +10,32 @@
                                 <div class="login" v-if="isLogin==false">
                                     <span class="font-weight-bold">账号密码登录</span>
                                     <a href="javascript:;" @click="login" class="color_black font-weight-bold" >注册账号</a>
-                                        <input v-model="uname" type="text" class="w-100 gl-input__field mt-3" placeholder="邮箱或手机号"/>
-                                        <span>请输入邮箱地址或手机号码</span>
-                                        <input v-model="upwd" @keyup.enter="login_dl()" type="password" class="w-100 gl-input__field mt-3" placeholder="密码"/>
-                                        <span>请输入密码</span>
+                                        <input name="uname" v-model="uname" @focus="uname_focus()" @blur="uname_blur()" type="text" class="w-100 gl-input__field mt-3" placeholder="请输入邮箱或手机号"/>
+                                        <span class="d_none"></span>
+                                        <input name="upwd" v-model="upwd" @focus="upwd_focus()" @blur="upwd_blur()" @keyup.enter="login_dl()" type="password" class="w-100 gl-input__field mt-3" placeholder="请输入密码"/>
+                                        <span class="d_none"></span>
                                         <!--checkbox-->
                                         <div class="mt-3">
                                             <div class="mycheck">
-                                                <input type="checkbox" value="1" id="" name="" />
-                                                <label for=""></label>
+                                                <input type="checkbox" id="mycheck" name=""/>
+                                                <label for="mycheck"></label>
                                             </div>
                                             <span>记住我的信息</span>
                                         </div>
                                         <div class=" mb-1 mt-3">
-                                            <a href="#" class="btn_a1 iconfont icon-jiantou1 w-100" @click="login_dl()">登录</a>
+                                            <button class="btn_a1 iconfont icon-jiantou1 w-100" @click="login_dl()">登录</button>
                                         </div>
                                         <a href="#" class="a_hover2 text-dark">忘记密码？</a>
                                 </div>
                                 <div class="login" v-else>
                                         <a href="javascript:;"  @click="logout" class="font-weight-bold">账号密码登录</a>
                                         <span class="font-weight-bold">注册账号</span>
-                                        <input v-model="usname" type="text"  class="w-100 gl-input__field mt-3" placeholder="邮箱或手机号"/>
-                                        <span>请输入邮箱地址或手机号码</span>
-                                        <input v-model="uspwd" @keyup.enter="login_zc()" type="password" class="w-100 gl-input__field mt-3" placeholder="密码"/>
-                                        <span>请输入密码</span>
+                                        <input name="uname" v-model="usname" @focus="uname_focus()" @blur="uname_blur()" type="text"  class="w-100 gl-input__field mt-3" placeholder="请输入邮箱或手机号"/>
+                                        <span class="d_none"></span>
+                                        <input name="upwd" v-model="uspwd" @focus="upwd_focus()" @blur="upwd_blur()" @keyup.enter="login_zc()" type="password" class="w-100 gl-input__field mt-3" placeholder="请输入密码"/>
+                                        <span class="d_none"></span>
                                         <div class=" mb-1 mt-3">
-                                            <a href="#" class="btn_a1 iconfont icon-jiantou1 w-100" @click="login_zc()">注册</a>
+                                            <button class="btn_a1 iconfont icon-jiantou1 w-100" @click="login_zc()">注册</button>
                                         </div>
                                 </div>
                                 
@@ -96,10 +96,70 @@ export default {
         upwd:"",
         usname:"",
         uspwd:"",
-        isLogin:false
+        isLogin:false,
+        ureg:/^[0-9a-z]{5,10}$/i,
+        preg:/^[0-9a-z]{6,16}$/i
         }
     },
     methods:{
+        //input输入验证
+         vali($txt,reg,msg){
+            //  console.log($txt);
+             var span=$txt.nextElementSibling;
+            //  console.log(span);
+            //  console.log(this.logDis);
+             if(reg.test($txt.value)){
+                 span.style.display="block";
+                 span.style.color="#00b700";
+                 span.innerHTML="格式正确可以使用";
+             }else{
+                 span.style.display="block";
+                 span.style.color="#ff6d6d";
+                 span.innerHTML=`${msg}`;
+             }
+         },
+        // button key输入验证
+         verify(uname,upwd){
+             if(!this.ureg.test(uname)){
+                 alert("用户名必须介于5-10位之间");
+                 return 0;
+             } 
+             if(!this.preg.test(upwd)){
+                 alert("密码必须介于6-16位之间");
+                 return 0;
+             }
+         },
+        // uname_input获取焦点
+        uname_focus(){
+            // console.log("获取焦点");
+            var input=document.getElementsByName("uname")[0];
+            var span=input.nextElementSibling;
+            span.style.display="block";
+            span.style.color="#000"; 
+            span.innerHTML="请输入用户名,用户名必须介于5-10位之间"; 
+        },
+        //unam_input失去焦点
+        uname_blur(){
+            var input=document.getElementsByName("uname")[0];
+            var span=input.nextElementSibling;
+            span.style.display="none";
+            this.vali(input,this.ureg,"用户名必须介于5-10位之间");
+        },
+        //upwd_input获取焦点
+        upwd_focus(){
+            var input=document.getElementsByName("upwd")[0];
+            var span=input.nextElementSibling;
+            span.style.display="block";
+            span.style.color="#000"; 
+            span.innerHTML="请输入密码,密码必须介于6-16位之间"; 
+        },
+        //upwd_input失去焦点
+        upwd_blur(){
+            var input=document.getElementsByName("upwd")[0];
+            var span=input.nextElementSibling;
+            span.style.display="none"; 
+            this.vali(input,this.preg,"密码必须介于6-16位之间");
+        },
         login(){
         this.isLogin=true;
         },
@@ -107,42 +167,46 @@ export default {
         this.isLogin=false;
         },
         login_dl(){
-        var uname=this.uname;
-        var upwd=this.upwd;
-        var url = "login";
-        console.log(this);
-        var obj={uname:uname,upwd:upwd}
-            this.axios.get(url,{params:obj}).then(res=>{
-                console.log(res);
-                if(res.data.code==-1){
-                alert("用户名和密码有误");
-                }else{
-                // 7.2:登录成功 跳转商品首页组件
-                alert("登录成功");
-                }
-            }).catch(err=>{
-                console.log(err);
-            });
+            var obj={uname:this.uname,upwd:this.upwd}
+            var url = "login";
+            if(this.verify(this.uname,this.upwd)==false){
+                return;
+            }else{
+                this.axios.get(url,{params:obj}).then(res=>{
+                    console.log(res);
+                    if(res.data.code==-1){
+                    alert("用户名和密码有误");
+                    }else{
+                    alert("登录成功");
+                    //跳转首页
+                    }
+                }).catch(err=>{
+                    console.log(err);
+                });
+            };
         },
         login_zc(){
-            // var uname=this.usname;
-            // var upwd=this.uspwd;
             var url="reg";
             var obj=this.qs.stringify({
             uname:this.usname,
             upwd:this.uspwd,
             })
-            // console.log(obj);
-            this.axios.post(url,obj).then(res=>{
-                if(res.data.code==-1){
-                alert("注册失败");
-            
-                }else{
-                alert("成功");
-                }
-            }).catch(err=>{
-                console.log(err);
-            });
+            if(this.verify(this.usname,this.uspwd)==false){
+                return;
+            }else{
+                // console.log(obj);
+                this.axios.post(url,obj).then(res=>{
+                    if(res.data.code==-1){
+                    alert("注册失败");
+                    }else{
+                    alert("注册成功");
+                    //跳转登录
+                    this.$router.push("/header");
+                    }
+                }).catch(err=>{
+                    console.log(err);
+                });
+            };
         }
     }
   
@@ -155,6 +219,9 @@ export default {
     content: "";
     display: block;
     clear: both;
+}
+.d_none{
+    display:none;
 }
 
 /*右上角字体 灰色 */
@@ -192,6 +259,8 @@ export default {
     display:inline-block;
     padding: 0 0.75rem;
     background-color:#000;
+    border:0;
+    outline:none;
     line-height:2.7rem;
     text-align:center;
     color:#fff;
@@ -249,7 +318,6 @@ export default {
     outline:0;
 }
 .gl-input__field+span{
-    color:#ff6d6d;
     font-size: .8rem ;
     padding: 0 .5rem;
 }
@@ -315,23 +383,29 @@ export default {
 .login>a:nth-child(2){
     color:#999 ;
     font-size:1.5rem;
+    border-bottom: 3px solid #999;
+    text-decoration:none ;
 
 
 }
 .login>span:nth-child(1){
     color:#000 ;
     font-size:1.5rem;
+    border-bottom: 3px solid #000;
 
 }
 .login>a:nth-child(1){
     color:#999 ;
     font-size:1.5rem;
+    border-bottom: 3px solid #999;
+    text-decoration:none ;
 
 
 }
 .login>span:nth-child(2){
     color:#000 ;
     font-size:1.5rem;
+    border-bottom: 3px solid #000;
 
 }
 

@@ -71,7 +71,7 @@
                                 <div id="content" class="collapse navbar-collapse ">
 
                                     <ul class="navbar-nav">
-                                        <li class="nav-item" id="box1" @mouseover="box1_hover()" @mouseleave="box1_hover()">
+                                        <li class="nav-item" id="box1" @mouseenter="box1_hover1()" @mouseleave="box1_hover2()">
                                             <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3" data-toggle="collapse" data-target="#nanzi">男子</a>
                                         </li>
                                         <!-- ↓-->
@@ -409,6 +409,9 @@
         </div>
         </div>
         <div class="mh"></div>
+        <div style="width:100%;height:300px; background-color:red;"><h1>1111111111</h1></div>
+        <div style="width:100%;height:300px; background-color:red;"><h1>2222222222</h1></div>
+        <div style="width:100%;height:300px; background-color:red;"><h1>3333333333</h1></div>
     </div>
 </template>
 <script>
@@ -420,15 +423,24 @@ export default {
         }
     },
     methods:{
+        //动态获取高度
+        changeHeight(){
+            var h=$(".header").css("height");
+            $(".mh").css({"height":h});
+	    },
         //鼠标进入box1显示box2
-        box1_hover(){
+        box1_hover1(){
             //搜索推荐鼠标悬停block
-	        $("#box1").hover(function(){
-		    $("#box2").toggle();
-	        });
+		    $("#box2").css("display","block");
         },
+        //鼠标离开box1none
+        box1_hover2(){
+            //搜索推荐鼠标离开none
+		    $("#box2").css("display","none");
+        },
+        //hover精选推荐block
         box2_hover(){
-            //搜索鼠标穿过block
+            //搜索鼠标悬停block
             $("#box2").mouseenter(function(){
             $("#box2").css("display","block")
             });
@@ -437,26 +449,28 @@ export default {
             $("#box2").css("display","none")
             });
         },
+        //sm navbar btn点击事件
         buts1_click(){
             //jquery sm搜索点击 shou显示并隐藏
-            
             $("#my_ipt").removeClass("show");
             $("#my-ipt1").removeClass("show");
-             
             $("#ssuo").toggle(); 
-        },
-        ssuo_click(){
-            //window = 搜索sm图标 onclick 隐藏 sm搜索推荐
-	        ($(window)||$("#ssuo")).click(function(){
-	        $("#my-ipt1").removeClass("show");
-	        });
-        }
-        
-        
+        },    
+    },
+    created(){
+        this.changeHeight();
+          
     },
     mounted(){
-
+        //window = 搜索sm图标 onclick 隐藏 sm搜索推荐
+	    ($(window)||$("#ssuo")).click(function(){
+	    $("#my-ipt1").removeClass("show");
+	    });  
     },
+    // watch:{
+    //     $(window).resize(this.changeHeight());
+    // }
+    
 }
 </script>
 <style scoped>
