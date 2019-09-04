@@ -17,6 +17,11 @@ axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded;c
 Vue.prototype.axios = axios;
 Vue.prototype.qs= qs;
 //main.js 
+//router跳转页面顶部
+router.afterEach((to,from,next)=>{
+window,scrollTo(0,0)
+  
+})
 //12:将实例对象添加Vue中
 new Vue({
   router,

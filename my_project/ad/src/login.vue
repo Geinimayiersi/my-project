@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="mx-lg-5 mx-md-3 mt-lg-3 mt-md-3 mb-lg-5 mb-md-2 ">
-        <div class="mx-lg-5">
+    <HeaderVue>
+    </HeaderVue>
+    <div class="mx-lg-5 mx-md-3 my-lg-5 my-md-5 py-lg-3 ">
+        <div class="mx-lg-5 my-lg-5 ">
             <div class="row mx-0">
                 <div class="col-lg-6 col-md-6 col-sm-12 p-0">
                     <div class="w-100 border_r float-clear">
@@ -43,9 +45,9 @@
                                 <div class="py-3 mt-3 border-top">
                                     <p class="m-0">使用其他方式登录</p>
                                 </div>
-                                <a href="#" class="d-inline-block my_bg_r23 align-middle mr-1"></a>
-                                <a href="#" class="d-inline-block my_bg_r24 align-middle mr-1"></a>
-                                <a href="#" class="d-inline-block my_bg_r25 align-middle mr-1"></a>
+                                <a href="#" class="d-inline-block my_bg_r23 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                <a href="#" class="d-inline-block my_bg_r24 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                <a href="#" class="d-inline-block my_bg_r25 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                 <div class="">
                                     <p class="m-0 color_rigth_top">*已绑定微信adiCLUB会员卡的会员，可通过微信直接登录</p>
                                 </div>
@@ -59,23 +61,23 @@
                                 <h4 class="color_black font-weight-bold">adiCLUB会员相关权益</h4>
                                 <p class="mt-3">成为adiCLUB会员并完善个人信息，即可享受更多权益:</p>
                                 <div class="mt-5">
-                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1"></a>
+                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                     <p href="#" class="d-inline-block">安全快捷支付订单</p>
                                 </div>
                                 <div class="">
-                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1"></a>
+                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                     <p href="#" class="d-inline-block">随时跟踪订单状态</p>
                                 </div>
                                 <div class="">
-                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1"></a>
+                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                     <p href="#" class="d-inline-block">即时收到打折优惠及新品发布信息</p>
                                 </div>
                                 <div class="">
-                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1"></a>
+                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                     <p href="#" class="d-inline-block">全场免普通达运费和七天无理由退货服务</p>
                                 </div>
                                 <div class="">
-                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1"></a>
+                                    <a href="#" class="d-inline-block my_bg_r26 align-middle mr-1" :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
                                     <p href="#" class="d-inline-block">消费即可获得积分，铜牌以上会员即可积分兑换优惠券</p>
                                 </div>
                             </div>
@@ -86,22 +88,44 @@
             </div>
         </div>
     </div>
+    <FooterVue>
+    </FooterVue>
   </div>
 </template>
 <script>
+import HeaderVue from "./header.vue" 
+import FooterVue from "./footer.vue"
 export default {
     data(){
         return {
-        uname:"",
-        upwd:"",
-        usname:"",
-        uspwd:"",
-        isLogin:false,
-        ureg:/^[0-9a-z]{5,10}$/i,
-        preg:/^[0-9a-z]{6,16}$/i
+            public_img:[],
+            uname:"",
+            upwd:"",
+            usname:"",
+            uspwd:"",
+            isLogin:false,
+            ureg:/^[0-9a-z]{5,10}$/i,
+            preg:/^[0-9a-z]{6,16}$/i
         }
     },
+    components:{
+        //注册子组件
+        "HeaderVue":HeaderVue,
+        "FooterVue":FooterVue
+    },
     methods:{
+        // 调用公共资源
+        publicImg(){
+                this.axios.get("public_img1").then(res=>{
+                    // console.log(res.data.data[0].details_img1);
+                    var data=res.data.data;
+                    // console.log(data);
+                    for(var i=0;i<data.length;i++){
+                        this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
+                    }
+                })
+                // console.log(this.public_img);
+        },
         //input输入验证
          vali($txt,reg,msg){
             //  console.log($txt);
@@ -179,6 +203,7 @@ export default {
                     }else{
                     alert("登录成功");
                     //跳转首页
+                    this.$router.push("/index");
                     }
                 }).catch(err=>{
                     console.log(err);
@@ -201,14 +226,22 @@ export default {
                     }else{
                     alert("注册成功");
                     //跳转登录
-                    this.$router.push("/header");
+                    // this.$router.push("/header");
+                    this.usname="";
+                    this.uspwd="";
+                    this.isLogin=false;
                     }
                 }).catch(err=>{
                     console.log(err);
                 });
             };
         }
+    },
+    created(){
+        // public_img
+        this.publicImg();
     }
+    
   
 }
 </script>
@@ -235,22 +268,22 @@ export default {
 /* 背景雪碧图*/
 .my_bg_r23{
     width:2.6rem;height:2.6rem;
-    background:url(./img/icon.png);
+    /* background:url(./img/icon.png); */
     background-position:-776px -266px;
 }
 .my_bg_r24{
     width:2.6rem;height:2.6rem;
-    background:url(./img/icon.png);
+    /* background:url(./img/icon.png); */
     background-position:-838px -266px;
 }
 .my_bg_r25{
     width:2.6rem;height:2.6rem;
-    background:url(./img/icon.png);
+    /* background:url(./img/icon.png); */
     background-position:-958px -266px;
 }
 .my_bg_r26{
     width:1.2rem;height:1.2rem;
-    background:url(./img/icon.png);
+    /* background:url(./img/icon.png); */
     background-position:-272px -19px;
 }
 
@@ -323,6 +356,7 @@ export default {
 }
 .gl-input__field:focus{
     border-bottom: 3px solid #000;
+    transition:1s;
 }
 .gl-input__checkbox{
     display:block;

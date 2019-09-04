@@ -55,7 +55,7 @@ server.get("/login",(req,res)=>{
   var upwd = req.query.upwd;
   //2:sql:查询sql语句
   //数据库 库名 表名 列名 小写字母
-  var sql = "SELECT id FROM login_user WHERE uname = ? AND upwd= ?";
+  var sql = "SELECT id,uname FROM login_user WHERE uname = ? AND upwd= ?";
   //3:json:{code:1,msg:"登录成功"}
   pool.query(sql,[uname,upwd],(err,result)=>{
      //执行sql语句回调函数
@@ -68,7 +68,8 @@ server.get("/login",(req,res)=>{
        //1：将登陆成功凭证保存session
        //result =[{id:1}]
        req.session.uid=result[0].id;
-       console.log(req.session);
+       req.session.uname=result[0].uname;
+      //  console.log(req.session);
        //2：将成功消息发送脚手架
         res.send({code:1,msg:"登录成功"})    
      }
@@ -100,85 +101,109 @@ server.post("/reg",(req,res)=>{
 //(1)启动node app.js
 //(2)
 //http://127.0.0.1:3000/login?uname=tom&upwd=123456
-//http://127.0.0.1:3000/login?uname=tom&upwd=121
 
 
-//功能二：分页查询商品列表
-//1：接收请求的方式get 请求地址 /product
-  server.get("/product",(req,res)=>{
-  //2：接收客户端第二个参数
-  //pno 页码 pageSize 页码大小
-  var p=req.query.pno;
-  var ps=req.query.pageSize;
-  //3：设置默认参数默认值 pno：1 pageSize：4
-  if(!p){p=1}
-  if(!ps){ps=4}
-  //4： 创建变量 offset 计算数据库偏移量
-  var offset=(p-1)*ps;
-  //5：对pageSize 转换整型？  node js 报错
-  ps=parseInt(ps);
-  //6：创建sql语句
-  var sql="select lid,price,lname,img_url from xz_laptop limit ?,?";
-  //7：通过连接池发送sql语句
-  pool.query(sql,[offset,ps],(err,result)=>{
-    if(err) throw err;
-    //8：获取数据库返回的查询结果
-    //9：将查询结果发送客户端
-    res.send({code:1,msg:"查询成功",data:result});
-  });
+
+//1：页面加载获取用户信息
+  server.get("/getUname",(req,res)=>{
+    var uid=req.session.uid;
+    if(!uid){
+      //2.3返回错误消息
+      res.send({code:-1,msg:"未登录"});
+    }else{
+      // //创建sql语句
+      var sql="select uname from login_user where id=?";
+      pool.query(sql,[uid],(err,result)=>{
+        if(err) throw err;
+        var uname=result[0].uname;
+        res.send({code:1,msg:"已登录",data:uname});
+        // res.send({code:1,msg:"已登录",data:uname});
+      });
+    } 
 });
 
-//http://127.0.0.1:3000/product?pno=5
-  
 
 
 
-//添加购物车 107~150
-//http://127.0.0.1:3000/addcart?lid=1&price=49&lname=phone
-//登录成功
-//http://127.0.0.1:3000/login?uname=tom&upwd=123
 
 
-
-//功能三：将指定商品加入购物车
-//1：get /addcart
-server.get("/addcart",(req,res)=>{
-  //2：参数
-  //获取当前登录用户id值
-  var uid=req.session.uid;
-  //2.2如果当前用户没有登录
-  if(!uid){
-    //2.3返回错误消息
-    res.send({code:-1,msg:"请先登录"});
-    return;
-  }
-  //2.4：获取商品的编号，商品价格，商品名称
-  var lid=req.query.lid;
-  var price=req.query.price;
-  var lname=req.query.lname;
-  //3：查询指定用户是否购买过此商品
-  var sql="select id from xz_cart where uid=? and lid=?";
-  pool.query(sql,[uid,lid],(err,result)=>{
-    if(err)throw err;
-    var sql="";
-    if(result.length==0){
-      //4：没有购买过此商品
-      sql=`insert into xz_cart values(null,${lid},${uid},1,'${lname}',${price},"01.jpg")`;
-    }else{
-      sql=`update xz_cart set count=count+1 where uid=${uid} and lid=${lid}`;
-    }
-    //5：购买过此商品更新
-    pool.query(sql,(err,result)=>{
-      if(err)throw err;
-      console.log(result);
-      res.send({code:1,msg:"添加成功"})
-    })
-    //6：json
+//详情页
+//1：get /listShop
+server.get("/listShop",(req,res)=>{
+  var sql="select * from details_list"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
   })
 });
-//http://127.0.0.1:3000/cart
-//http://127.0.0.1:3000/login?uname=tom&upwd=123
-//http://127.0.0.1:3000/cart
+
+
+// 首页
+//1：get /homePage
+server.get("/homePage",(req,res)=>{
+  var sql="select * from hoem_page"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+  })
+  
+});
+//2：get /homeShop1
+server.get("/homeShop1",(req,res)=>{
+  var sql="select * from home_shop"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+    // console.log(result);
+  })
+});
+
+
+//3：get /homeShop1
+server.get("/details_img1",(req,res)=>{
+  var sql="select * from details_img"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+    // console.log(result);
+  })
+});
+
+
+//4：get /header_img1
+server.get("/header_img1",(req,res)=>{
+  var sql="select * from header_img"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+    // console.log(result);
+  })
+});
+
+
+//5：get /public_img1
+server.get("/public_img1",(req,res)=>{
+  var sql="select * from public_img"
+  pool.query(sql,(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+    // console.log(result);
+  })
+});
+
+
+//6：get /ShopDedails1
+server.get("/ShopDedails1",(req,res)=>{
+  var pid=req.query.pid;
+  var sql="select * from 	shopdedails where pid=?"
+  pool.query(sql,[pid],(err,result)=>{
+    if(err) throw err;
+    res.send({code:1,msg:"查询成功",data:result});
+    // console.log(result);
+  })
+});
+
+
 
 //功能四：查询当前登录用户购物信息
 //此功能先行条件先登录

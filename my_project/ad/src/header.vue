@@ -1,417 +1,536 @@
 <template>
     <div>
         <div class="position-fixed header z_index_999 w-100">
-        <!-- 头部图图片提示框-->
-        <div class="alert alert-dismissible py-0 px-0 my-0">
-            <span class="close" data-dismiss="alert">&times;</span>
-            <a href="#" class="">
-                <img src="./img/top-pc-sale.jpg" alt="" class="w-100"/>
-            </a>
-        </div>
-        <!-- 顶部导航sm隐藏-->
-        <div class="px-lg-5 bg_black">
-            <div class="px-lg-5 bg_black">
-                <div class="px-lg-5 bg_black">
-                    <ul class="nav nav-pills bg_black d_sm_none justify-content-end">
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-1 pb-1">订单追踪</a>
-                            <a href="#tab11" class="d-inline-block my_bg_r1 mr-3 align-middle  "></a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-1">帮助中心</a>
-                            <a href="#tab11" class="a_hover  color_rigth_top">？</a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-1">在线客服</a>
-                            <a href="#tab11" class="d-inline-block my_bg_r2 mr-3 align-middle "></a>
-                        </li>
-                        <li class="nav-item">
-                            <a data-toggle="pill" href="#tab11" class="nav-link  color_rigth_top d-inline-block pr-1">登录</a>
-                            <a href="#tab11" class="d-inline-block my_bg_r3 mr-3 align-middle  "></a>
-                        </li>
-
-                    </ul>
-
-                </div>
+            <!-- 头部订单追踪 -->
+            <div class="nav_pills">
+                <ul >
+                    <li >
+                        <router-link to="/NotFound" class="iconfont icon-icon-">订单追踪</router-link>
+                    </li>
+                    <li >
+                        <router-link to="/NotFound" class="iconfont icon-bangzhu">帮助中心</router-link>
+                    </li>
+                    <li >
+                        <router-link to="/NotFound" class="iconfont icon-kefu">在线客服</router-link>
+                    </li>
+                    <li >
+                        <router-link to="/login" v-show="isLogin" class="iconfont icon-geren">登录注册</router-link>
+                        <a href="javascript:;" name="get_uname" v-show="!isLogin" class="iconfont icon-geren"></a>
+                    </li>
+                </ul>
             </div>
-        </div>
-
-        <!-- 顶部导航栏navbar-->
-        <div class="px-lg-5 bg_black">
-            <div class="px-lg-5 bg_black">
-                <div class="px-lg-5 bg_black">
-                    <div class="row mx-0">
-                        <div class="col-lg-8 col-md-8 col-sm-12 p-0">
-                            <!-- 顶部导航栏navbar-->
-                            <div class="navbar navbar-expand-md navbar-dark bg_black text-sm-center pb-lg-0 pb-md-0 px-lg-0 px-md-0">
-                                <!-- 导航栏sm按钮样式-->
-                                <button class="navbar-toggler border-light" data-toggle="collapse" data-target="#content" id="buts1" @click="buts1_click()">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <!-- 顶部logo图标-->
-                                <div class="d-inline-block bg_black pb-3 px-2 mr-sm-3">
-                                    <a href="#" class="">
-                                        <img src="./img/logo-new.png" alt="" class=""/>
-                                    </a>
-                                </div>
-                                <div class="float-sm-right">
-                                    <!-- sm搜索图标-->
-                                    <div id="ssuo" class="px-2" data-toggle="collapse" data-target="#my_ipt" @click="ssuo_click()" >
-                                        <a href="#" class="my_bg_r5 align-middle "></a>
-                                    </div>
-
-                                    <!-- 顶部购物袋  lg md 显示  sm—none-->
-                                    <div class="d-inline-block d-md-none d-lg-none px-2">
-                                        <a href="#" class="d-inline-block my_bg_r4 mr-1 align-middle"></a>
-                                    </div>
-                                </div>
-
-
-                                <!-- 导航栏-->
-                                <div id="content" class="collapse navbar-collapse ">
-
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item" id="box1" @mouseenter="box1_hover1()" @mouseleave="box1_hover2()">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3" data-toggle="collapse" data-target="#nanzi">男子</a>
-                                        </li>
-                                        <!-- ↓-->
-                                        <!-- ↓点击获取tabel 默认隐藏lg md-->
-                                        <div class="collapse d-lg-none d-md-none text-left" id="nanzi">
-                                            <table class="table table-bordered table-light table-hover mb-0">
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">男子全部产品</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">鞋类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">服饰类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">附配件类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">个性印制产品</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">精选推荐</a></td>
-                                                </tr>
-                                            </table>
-                                            <div class="row mx-0">
-                                                <div class="col-6 p-0">
-                                                    <table class="table table-bordered table-light table-hover mb-0">
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">最新上市</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">限量发售</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                YEEZY</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                Originals|EQT GAZELLE</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div class="col-6 p-0">
-                                                    <table class="table table-bordered table-light table-hover mb-0">
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">新品发售日历</a>
-                                                                <sup class="a_hover text-success font_0-8 font-weight-bold">NEW</sup></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">本周热卖</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                Originals|adicolor.</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                adidas neo|生来好动</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <li class="nav-item ">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3" data-toggle="collapse" data-target="#nvzi">女子</a>
-                                        </li>
-                                        <!-- ↓-->
-                                        <!-- ↓点击获取tabel 默认隐藏lg md-->
-                                        <div class="collapse d-lg-none d-md-none text-left" id="nvzi">
-                                            <table class="table table-bordered table-light table-hover mb-0">
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">女子全部产品</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">鞋类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">服饰类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">附配件类</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">个性印制产品</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"><a href="#" class="a_hover color_black font-weight-bold font_0-8">精选推荐</a></td>
-                                                </tr>
-                                            </table>
-                                            <div class="row mx-0">
-                                                <div class="col-6 p-0">
-                                                    <table class="table table-bordered table-light table-hover mb-0">
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">最新上市</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">限量发售</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                YEEZY</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                Originals|EQT GAZELLE</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div class="col-6 p-0">
-                                                    <table class="table table-bordered table-light table-hover mb-0">
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">新品发售日历</a>
-                                                                <sup class="a_hover text-success font_0-8 font-weight-bold">NEW</sup></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">本周热卖</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                Originals|adicolor.</a></td>
-                                                        </tr>
-                                                        <tr class="text-center">
-                                                            <td><a href="#" class="a_hover color_black font_0-8">
-                                                                adidas neo|生来好动</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3">儿童</a>
-                                        </li>
-                                        <li class="nav-item d_sm_none">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3">|</a>
-                                        </li>
-                                        <li class="nav-item d-lg-none d-md-none">
-                                            <hr class="w-100 bg-white"/>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3">运动</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3">品牌</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link font-weight-bold py-lg-3 py-md-3">精选系列</a>
-                                        </li>
-                                        <li class="nav-item bg_dark border-bottom d-md-none d-lg-none">
-                                            <a href="#" class="d-inline-block my_bg_r6 mr-1 align-middle"></a>
-                                                <a href="#" class="nav-link font_1-2 d-inline-block ">400-999-5999</a>
-                                        </li>
-                                        <li class="nav-item bg_dark border-bottom d-md-none d-lg-none">
-                                            <a href="#" class="d-inline-block my_bg_r7 mr-1 align-middle"></a>
-                                                <a href="#" class="nav-link font_1-2 d-inline-block ">在线客服</a>
-                                        </li>
-                                        <li class="nav-item bg_dark border-bottom d-md-none d-lg-none">
-                                            <a href="#" class="nav-link font_1-2">帮助中心</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
+            <!-- 顶部导航栏navbar-->
+            <div class="navigation ">
+                <div class="nav_float_right">
+                    <ul >
+                        <li class="hov_show">
+                            <a href="javascript:;" ><input type="text" placeholder="抢YEEZY" :style="{'backgroundImage':`url('${public_img[8]}')`}"></a>
+                            <div class="hov_block">
+                                <p>搜索推荐</p>
+                                <ul >
+                                    
+                                    <li><a href="javascript:;" >抢YEEZY</a></li>
+                                    <li><a href="javascript:;" >4D</a></li>
+                                    <li><a href="javascript:;" >Clima</a></li>
+                                    <li><a href="javascript:;" >Nite JOGGER</a></li>
+                                    <li><a href="javascript:;" >Game of Thrones</a></li>
+                                    <li><a href="javascript:;" >ultraboost</a></li>
+                                    <li><a href="javascript:;" >yung 96</a></li>
+                                    <li><a href="javascript:;" >superstar</a></li>
+                                    <li><a href="javascript:;" >stan smith</a></li>
+                                    <li><a href="javascript:;" >三叶草</a></li>
+                                    
+                                </ul>
+                                <p>搜索记录</p>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4  p-0 d-sm-none d-lg-block d-md-block">
-                            <div class="float-right pt-4">
-                                <!-- 顶部lg md 搜索框-->
-                                <div class="d-inline-block d-lg-inline-block d-md-inline-block" data-toggle="collapse" data-target="#my-ipt1">
-                                    <input type="text" class="input_outline_0" placeholder="抢YEEZY"/>
-
-                                </div>
-                                <!-- 顶部购物袋  lg md 显示  sm—none-->
-                                <div class="d-inline-block px-2">
-                                    <a href="#" class="d-inline-block my_bg_r4 mr-1 align-middle"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- sm搜索框 w100-->
-        <div class="collapse d-md-none d-lg-none " id="my_ipt">
-            <div class="bg_black text-center" data-toggle="collapse" data-target="#my-ipt1" >
-                <input type="text" class="mb-1 w-90 input_outline_0 " placeholder="抢YEEZY"/>
-            </div>
-        </div>
-        <!-- 搜索推荐导航-->
-        <div class="flex-container">
-            <div class="collapse position-absolute " id="my-ipt1">
-                <div class="bg-white p-3">
-                    <p class="font-weight-bold">搜索推荐</p>
-                    <ul class="nav justify-content-start">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">抢YEEZY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">4D</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">Clima</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">Nite JOGGER</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">Game of Thrones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">ultraboost</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">yung 96</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">superstar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">stan smith</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link color_black">三叶草</a>
                         </li>
                     </ul>
-                    <p class="font-weight-bold">搜索记录</p>
                 </div>
-            </div>
-
-        </div>
-        <!-- hover导航栏sm none-->
-        <div class="bg-white position-absolute w-100 d_none px-lg-5" id="box2" @mouseover="box2_hover()" @mouseleave="box2_hover()">
-            <div class="px-lg-5">
-                <div class="px-lg-5">
-                    <div class="row mx-0 d_sm_none px-5"  id="c1">
-                        <div class="col-10 p-0 mt-2">
-                            <div class="row mx-0">
-                                <div class="col-3 p-0">
-                                    <h6 class="font-weight-bold">精选推荐</h6>
-                                    <ul class="list-unstyled">
-                                        <li class=""><a href="#">全部男子折扣</a></li>
-                                        <li class=""><a href="#">全新上市</a></li>
-                                        <li class=""><a href="#">新品发售日历</a>
-                                            <sup class="text-success font_0-8 font-weight-bold">NEW</sup>
-                                        </li>
-                                        <li class=""><a href="#">限量发售</a></li>
-                                        <li class=""><a href="#">本周热卖</a></li>
-                                        <li class="w-25"><hr/></li>
-                                        <li class=""><a href="#">YEEZY</a></li>
-                                        <li class=""><a href="#">Originals|adicolor.</a></li>
-                                        <li class=""><a href="#">Originals|EQT GAZELLE</a></li>
-                                        <li class=""><a href="#">adidas neo|生来好动</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <h6 class="font-weight-bold">鞋类</h6>
-                                    <ul class="list-unstyled">
-                                        <li class=""><a href="#">Originals</a></li>
-                                        <li class=""><a href="#">跑步</a></li>
-                                        <li class=""><a href="#">帆布/滑板</a></li>
-                                        <li class=""><a href="#">拖鞋/凉鞋</a></li>
-                                        <li class=""><a href="#">复古/老爹鞋</a></li>
-                                        <li class=""><a href="#">adidas neo</a></li>
-                                        <li class=""><a href="#">篮球</a></li>
-                                        <li class=""><a href="#">足球</a></li>
-                                        <li class=""><a href="#">户外</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <h6 class="font-weight-bold">服饰类</h6>
-                                    <ul class="list-unstyled">
-                                        <li class=""><a href="#">短袖T恤/上衣</a></li>
-                                        <li class=""><a href="#">POLO衫</a></li>
-                                        <li class=""><a href="#">卫衣/套头衫</a></li>
-                                        <li class=""><a href="#">夹克/外套</a></li>
-                                        <li class=""><a href="#">短裤</a></li>
-                                        <li class=""><a href="#">长裤/运动裤</a></li>
-                                        <li class=""><a href="#">比赛服</a></li>
-                                        <li class=""><a href="#">泳裤</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <h6 class="font-weight-bold">附配件类</h6>
-                                    <ul class="list-unstyled">
-                                        <li class=""><a href="#">包</a></li>
-                                        <li class=""><a href="#">袜子</a></li>
-                                        <li class=""><a href="#">帽子/手套/围巾</a></li>
-                                        <li class=""><a href="#">足球/篮球</a></li>
-                                        <li class=""><a href="#">运动装备</a></li>
-                                    </ul>
+                <div class="nav_float_left">
+                    <ul >
+                        <li class="hov_show">
+                            <router-link to="/index"><img :src="`${header_img[0]}`" /></router-link>
+                            <!-- hover导航栏sm none-->
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >男子</a>
+                            <!-- hover导航栏sm none-->
+                            <div class="hov_block">
+                                <div >
+                                    <div class="c1" >
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">精选推荐</h6></li>
+                                            <li ><a href="javascript:;">全部男子折扣</a></li>
+                                            <li ><a href="javascript:;">全新上市</a></li>
+                                            <li ><a href="javascript:;">新品发售日历</a>
+                                                <sup class="text-success font_0-8 font-weight-bold">NEW</sup>
+                                            </li>
+                                            <li ><a href="javascript:;">限量发售</a></li>
+                                            <li ><a href="javascript:;">本周热卖</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">YEEZY</a></li>
+                                            <li ><a href="javascript:;">Originals|adicolor.</a></li>
+                                            <li ><a href="javascript:;">Originals|EQT GAZELLE</a></li>
+                                            <li ><a href="javascript:;">adidas neo|生来好动</a></li>
+                                        </ul>
+                                        <ul> 
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">鞋类</h6></li>
+                                            <li ><a href="javascript:;">Originals</a></li>
+                                            <li ><a href="javascript:;">Originals</a></li>
+                                            <li ><a href="javascript:;">跑步</a></li>
+                                            <li ><a href="javascript:;">帆布/滑板</a></li>
+                                            <li ><a href="javascript:;">拖鞋/凉鞋</a></li>
+                                            <li ><a href="javascript:;">复古/老爹鞋</a></li>
+                                            <li ><a href="javascript:;">adidas neo</a></li>
+                                            <li ><a href="javascript:;">篮球</a></li>
+                                            <li ><a href="javascript:;">足球</a></li>
+                                            <li ><a href="javascript:;">户外</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">服饰类</h6></li>
+                                            <li ><a href="javascript:;">短袖T恤/上衣</a></li>
+                                            <li ><a href="javascript:;">POLO衫</a></li>
+                                            <li ><a href="javascript:;">卫衣/套头衫</a></li>
+                                            <li ><a href="javascript:;">夹克/外套</a></li>
+                                            <li ><a href="javascript:;">短裤</a></li>
+                                            <li ><a href="javascript:;">长裤/运动裤</a></li>
+                                            <li ><a href="javascript:;">比赛服</a></li>
+                                            <li ><a href="javascript:;">泳裤</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li ><h6 class="font-weight-bold">附配件类</h6></li>
+                                            <li ><a href="javascript:;">包</a></li>
+                                            <li ><a href="javascript:;">袜子</a></li>
+                                            <li ><a href="javascript:;">帽子/手套/围巾</a></li>
+                                            <li ><a href="javascript:;">足球/篮球</a></li>
+                                            <li ><a href="javascript:;">运动装备</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li ><a href="javascript:;" class="d-inline-block my_bg_r8 mr-1 align-middle" :style="{'backgroundImage':`url('${public_img[6]}')`}"></a>
+                                            <h6 class="d-inline-block font-weight-bold">个性印制产品</h6></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[1]}`" /></a></li>
+                                            <li ><a href="javascript:;">足球个性印制产品</a></li>
+                                            <li ><a href="javascript:;">Originals 个性印制产品</a></li>
+                                            <li ><a href="javascript:;">adidasneo个性印制产品</a></li>
+                                            <li ><a href="javascript:;">个性化印制球衣</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="c2" >
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">男子全部产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部男子鞋</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部男子服饰</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部男子配件</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部男子个性印制产品</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class="col-2 p-0 ">
-                            <a href="#" class="d-inline-block my_bg_r8 mr-1"></a>
-                            <h6 class="d-inline-block font-weight-bold">个性印制产品</h6>
-                            <ul class="list-unstyled">
-                                <li class=""><a href="#"><img src="./img/15211227486009014.png" alt=""/></a></li>
-                                <li class=""><a href="#">
-                                    足球个性印制产品</a></li>
-                                <li class=""><a href="#">
-                                    Originals 个性印制产品</a></li>
-                                <li class=""><a href="#">
-                                    adidasneo个性印制产品</a></li>
-                                <li class=""><a href="#">
-                                    个性化印制球衣</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row mx-0 d_sm_none px-5 py-5" id="c2">
-                        <div class="col-9 p-0">
-                            <div class="row mx-0">
-                                <div class="col-3 p-0">
-                                    <a href="#" class="font-weight-bold">男子全部产品</a>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <a href="#" class="font-weight-bold">全部男子鞋</a>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <a href="#" class="font-weight-bold">全部男子服饰</a>
-                                </div>
-                                <div class="col-3 p-0">
-                                    <a href="#" class="font-weight-bold">全部男子配件</a>
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >女子</a>
+                            <!-- hover导航栏sm none-->
+                            <div class="hov_block">
+                                <div >
+                                    <div class="c1" >
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">精选推荐</h6></li>
+                                            <li ><a href="javascript:;">最新上市</a></li>
+                                            <li ><a href="javascript:;">新品发售日历</a><sup class="text-success font_0-8 font-weight-bold">NEW</sup></li>
+                                            <li ><a href="javascript:;">限量发售</a></li>
+                                            <li ><a href="javascript:;">本周热卖</a></li>
+                                            <li ><a href="javascript:;">Originals|OZWEEGO</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">Originals|adicolor.</a></li>
+                                            <li ><a href="javascript:;">adidas neo|生来好动</a></li>
+                                            <li ><a href="javascript:;">adidas|SenseBOOST</a></li>
+                                            <li ><a href="javascript:;">adidas|UltraBOOST 19</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">鞋类</h6></li>
+                                            <li ><a href="javascript:;">Originals</a></li>
+                                            <li ><a href="javascript:;">adidas neo</a></li>
+                                            <li ><a href="javascript:;">跑步</a></li>
+                                            <li ><a href="javascript:;">小白鞋</a></li>
+                                            <li ><a href="javascript:;">复古/老爹鞋</a></li>
+                                            <li ><a href="javascript:;">拖鞋/凉鞋</a></li>
+                                            <li ><a href="javascript:;">户外</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">服饰类</h6></li>
+                                            <li ><a href="javascript:;">短袖T恤/上衣</a></li>
+                                            <li ><a href="javascript:;">卫衣/套头衫</a></li>
+                                            <li ><a href="javascript:;">夹克/外套</a></li>
+                                            <li ><a href="javascript:;">运动胸衣</a></li>
+                                            <li ><a href="javascript:;">短裤/短裙</a></li>
+                                            <li ><a href="javascript:;">连衣裙</a></li>
+                                            <li ><a href="javascript:;">紧身裤</a></li>
+                                            <li ><a href="javascript:;">长裤/运动裤</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li ><h6 class="font-weight-bold">附配件类</h6></li>
+                                            <li ><a href="javascript:;">包</a></li>
+                                            <li ><a href="javascript:;">袜子</a></li>
+                                            <li ><a href="javascript:;">帽子/手套/围巾</a></li>
+                                            <li ><a href="javascript:;">球类</a></li>
+                                            <li ><a href="javascript:;">运动装备</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li ><a href="javascript:;" class="d-inline-block my_bg_r8 mr-1 align-middle" :style="{'backgroundImage':`url('${public_img[6]}')`}"></a>
+                                                <h6 class="d-inline-block font-weight-bold">个性印制产品</h6>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[2]}`" /></a></li>
+                                            <li ><a href="javascript:;">表情印制（限时免费）</a></li>
+                                            <li ><a href="javascript:;">
+                                                Originals 个性印制产品</a></li>
+                                            <li ><a href="javascript:;">
+                                                adidasneo个性印制产品</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="c2" >
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">女子全部产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部女子鞋</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部女子服饰</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部女子配件</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                               <a href="javascript:;" class="font-weight-bold">全部女子个性印制产品</a>
+                                            </li>
+                                        </ul> 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3 p-0">
-                            <a href="#" class="font-weight-bold">全部男子个性印制产品</a>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >儿童</a>
+                            <!-- hover导航栏sm none-->
+                            <div class="hov_block">
+                                <div >
+                                    <div class="c1" >
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">精选推荐</h6>
+                                            </li>
+                                            <li ><a href="javascript:;">最新上市</a></li>
+                                            <li ><a href="javascript:;">套装系列</a><sup class="text-success font_0-8 font-weight-bold">NEW</sup></li>
+                                            <li ><a href="javascript:;">亲子系列</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">Superstar 360</a></li>
+                                            <li ><a href="javascript:;">RapidaZen</a></li>
+                                            <li ><a href="javascript:;">FortaRun</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">大童（8-14岁）</h6></li>
+                                            <li ><a href="javascript:;">男大童：鞋类</a></li>
+                                            <li ><a href="javascript:;">女大童：鞋类</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">男大童：服装</a></li>
+                                            <li ><a href="javascript:;">女大童：服装</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">箱包附配件</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li ><h6 class="font-weight-bold">小童（4-8岁</h6></li>
+                                            <li ><a href="javascript:;">男小童：鞋类</a></li>
+                                            <li ><a href="javascript:;">女小童：鞋类</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">男小童：服装</a></li>
+                                            <li ><a href="javascript:;">女小童：服装</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">箱包附配件</a></li>
+                                        </ul>
+                                        <ul  class="d_sm_none">
+                                            <li ><h6 class="font-weight-bold">婴幼儿（0-4岁）</h6></li>
+                                            <li ><a href="javascript:;">男婴童：鞋类</a></li>
+                                            <li ><a href="javascript:;">女婴童：鞋类</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">男婴童：服装</a></li>
+                                            <li ><a href="javascript:;">女婴童：服装</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">箱包附配件</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li ><a href="javascript:;" class="d-inline-block my_bg_r8 mr-1 align-middle" :style="{'backgroundImage':`url('${public_img[6]}')`}"></a>
+                                                <h6 class="d-inline-block font-weight-bold">个性印制产品</h6>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[2]}`" /></a></li>
+                                            <li ><a href="javascript:;">个性印制儿童鞋</a></li>
+                                            <li ><a href="javascript:;">个性印制儿童服饰</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="c2" >
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部儿童产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部大童（8-14岁）产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部小童（4-8岁）产品</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部婴幼儿（0-4岁）产品</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                               <a href="javascript:;" class="font-weight-bold">全部儿童个性印制产品</a>
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >运动</a>
+                            <!-- hover导航栏sm none-->
+                            <div class="hov_block">
+                                <div >
+                                    <div class="c1" >
+                                        <ul>
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"  :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">跑步</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[3]}`" /></a></li>
+                                            <li ><a href="javascript:;">跑步鞋</a></li>
+                                            <li ><a href="javascript:;">跑步服饰</a></li>
+                                            <li ><a href="javascript:;">运动装备</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">UltraBOOST</a></li>
+                                            <li ><a href="javascript:;">Alpha Bounce</a></li>
+                                            <li ><a href="javascript:;">Clima</a></li>
+                                            <li ><a href="javascript:;">PulseBOOST</a></li>
+                                            <li ><a href="javascript:;">SenseBOOST</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"   :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">训练</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[4]}`" /></a></li>
+                                            <li ><a href="javascript:;">训练鞋</a></li>
+                                            <li ><a href="javascript:;">训练服饰</a></li>
+                                            <li ><a href="javascript:;">运动装备</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">运动胸衣Bra&紧身裤</a></li>
+                                            <li ><a href="javascript:;">Clima</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"   :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">足球</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[5]}`" /></a></li>
+                                            <li ><a href="javascript:;">足球鞋</a></li>
+                                            <li ><a href="javascript:;">足球服饰</a></li>
+                                            <li ><a href="javascript:;">运动装备</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">Predator</a></li>
+                                            <li ><a href="javascript:;">X</a></li>
+                                            <li ><a href="javascript:;">NEMEZIZ</a></li>
+                                            <li ><a href="javascript:;">COPA</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"   :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">篮球</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[6]}`" /></a></li>
+                                            <li ><a href="javascript:;">篮球鞋</a></li>
+                                            <li ><a href="javascript:;">篮球服饰</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">James Harden</a></li>
+                                            <li ><a href="javascript:;">Derrick Rose</a></li>
+                                            <li ><a href="javascript:;">Damian Lillard</a></li>
+                                            <li ><a href="javascript:;">Donovan Mitchell</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"   :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">户外</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[7]}`" /></a></li>
+                                            <li ><a href="javascript:;">户外鞋</a></li>
+                                            <li ><a href="javascript:;">户外服饰</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">MYSHELTER防雨外套</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li >
+                                                <div class="border_bottom">
+                                                    <a href="javascript:;" class="d-inline-block my_bg_r9 mr-1 align-middle"  :style="{'backgroundImage':`url('${public_img[5]}')`}"></a>
+                                                    <h6 class="font-weight-bold">其他运动</h6>
+                                                </div>
+                                            </li>
+                                            <li ><a href="javascript:;">网球</a></li>
+                                            <li ><a href="javascript:;">高尔夫</a></li>
+                                            <li ><a href="javascript:;">游泳</a></li>
+                                            <li ><a href="javascript:;">排球</a></li>
+                                            <li ><a href="javascript:;">橄榄球</a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                    <div class="c2" >
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部跑步产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部训练产品</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部足球产品</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部篮球产品</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                               <a href="javascript:;" class="font-weight-bold">全部户外产品</a>
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >品牌</a>
+                            <!-- hover导航栏sm none-->
+                            <div class="hov_block">
+                                <div >
+                                    <div class="c1" >
+                                        <ul>
+                                            <li class="mb-1" ><a href="javascript:;"><img :src="`${header_img[14]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[8]}`" /></a></li>
+                                            <li ><a href="javascript:;">鞋类</a></li>
+                                            <li ><a href="javascript:;">服装</a></li>
+                                            <li ><a href="javascript:;">附配件</a></li>
+                                            <li ><a href="javascript:;">新品上市</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">OZWEEGO</a></li>
+                                            <li ><a href="javascript:;">SUPERSTAR</a></li>
+                                            <li ><a href="javascript:;">STAN SMITH</a></li>
+                                            <li ><a href="javascript:;">NMD</a></li>
+                                            <li ><a href="javascript:;">NITE JOGGER</a></li>
+                                            <li ><a href="javascript:;">CONTINENTAL</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li class="mb-1" ><a href="javascript:;"><img :src="`${header_img[15]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[9]}`" /></a></li>
+                                            <li ><a href="javascript:;">男子服饰</a></li>
+                                            <li ><a href="javascript:;">女子服饰</a></li>
+                                            <li ><a href="javascript:;">新品上市</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">Z.N.E</a></li>
+                                            <li ><a href="javascript:;">武极</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li  class="mb-1" ><a href="javascript:;"><img :src="`${header_img[16]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[10]}`" /></a></li>
+                                            <li ><a href="javascript:;">鞋类</a></li>
+                                            <li ><a href="javascript:;">服装</a></li>
+                                            <li ><a href="javascript:;">附配件</a></li>
+                                            <li ><a href="javascript:;">新品上市</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">生来好动</a></li>
+                                            <li ><a href="javascript:;">Crazychaos</a></li>
+                                            <li ><a href="javascript:;">Questar</a></li>
+                                            <li ><a href="javascript:;">Grand Court</a></li>
+                                            <li ><a href="javascript:;">Advantage</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li class="mb-1"  ><a href="javascript:;"><img :src="`${header_img[17]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[11]}`" /></a></li>
+                                            <li ><a href="javascript:;">篮球鞋</a></li>
+                                            <li ><a href="javascript:;">篮球服饰</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">James Harden</a></li>
+                                            <li ><a href="javascript:;">Derrick Rose</a></li>
+                                            <li ><a href="javascript:;">Damian Lillard</a></li>
+                                            <li ><a href="javascript:;">Donovan Mitchell</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li  class="mb-1" ><a href="javascript:;"><img :src="`${header_img[18]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[12]}`" /></a></li>
+                                            <li ><a href="javascript:;">鞋类</a></li>
+                                            <li ><a href="javascript:;">服装</a></li>
+                                            <li ><a href="javascript:;">新品上市</a></li>
+                                            <li class="w-25"><hr/></li>
+                                            <li ><a href="javascript:;">TERREX x WHITE MOUNTAINEERING</a></li>
+                                        </ul>
+                                        <ul class="d_sm_none">
+                                            <li class="mb-1"  ><a href="javascript:;"><img :src="`${header_img[19]}`" /></a></li>
+                                            <li ><a href="javascript:;"><img :src="`${header_img[13]}`" /></a></li>
+                                            <li ><a href="javascript:;">鞋类</a></li>
+                                            <li ><a href="javascript:;">服饰</a></li>
+                                            <li ><a href="javascript:;">附配件</a></li>
+                                            <li ><a href="javascript:;">新品上市</a></li>
+                                            <li class="w-25"><hr/></li>
+                                        </ul>
+                                    </div> 
+                                    <div class="c2">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部adidas Originals系列</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部adidas athletics系列</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" class="font-weight-bold">全部adidas neo系列</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                                <a href="javascript:;" class="font-weight-bold">全部adidas terrex系列</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                               <a href="javascript:;" class="font-weight-bold">全部adidas by Stella McCartney系列</a>
+                                            </li>
+                                            <li class="d_sm_none">
+                                               <a href="javascript:;" class="font-weight-bold">全部skateboarding系列</a>
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hov_show">
+                            <a href="javascript:;" >精选系列</a>
+                            <!-- hover导航栏sm none-->
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+            
         </div>
         <div class="mh"></div>
-        <div style="width:100%;height:300px; background-color:red;"><h1>1111111111</h1></div>
-        <div style="width:100%;height:300px; background-color:red;"><h1>2222222222</h1></div>
-        <div style="width:100%;height:300px; background-color:red;"><h1>3333333333</h1></div>
     </div>
 </template>
 <script>
@@ -419,61 +538,168 @@
 export default {
     data(){
         return{
-
+            isLogin:false,
+            header_img:[],
+            public_img:[],
         }
     },
     methods:{
+        // 调用公共资源
+        publicImg(){
+                this.axios.get("public_img1").then(res=>{
+                    // console.log(res.data.data[0].details_img1);
+                    var data=res.data.data;
+                    // console.log(data);
+                    for(var i=0;i<data.length;i++){
+                        this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
+                    }
+                })
+                // console.log(this.public_img);
+        },
+        HeaderImg(){
+            this.axios.get("header_img1").then(res=>{
+                var data=res.data.data;
+                // console.log(data);
+                for(var i=0;i<data.length;i++){
+                    this.header_img.push("http://127.0.0.1:3000/"+data[i].header_img1);
+                }
+            })
+                // console.log(this.header_img);
+        },
+        //页面加载时获取unam
+        get_uname(){
+            this.axios.get("getUname").then(res=>{
+                if(res.data.code==-1){
+                    this.isLogin=true;
+                }else{
+                   var uname=document.getElementsByName("get_uname")[0];
+                   uname.innerHTML=`欢迎 ${res.data.data}`;
+                }
+
+            }).catch(err=>{
+                console.log(err);
+            });
+        },
         //动态获取高度
         changeHeight(){
             var h=$(".header").css("height");
             $(".mh").css({"height":h});
-	    },
-        //鼠标进入box1显示box2
-        box1_hover1(){
-            //搜索推荐鼠标悬停block
-		    $("#box2").css("display","block");
-        },
-        //鼠标离开box1none
-        box1_hover2(){
-            //搜索推荐鼠标离开none
-		    $("#box2").css("display","none");
-        },
-        //hover精选推荐block
-        box2_hover(){
-            //搜索鼠标悬停block
-            $("#box2").mouseenter(function(){
-            $("#box2").css("display","block")
-            });
-            //搜索鼠标离开none
-            $("#box2").mouseleave(function(){
-            $("#box2").css("display","none")
-            });
-        },
-        //sm navbar btn点击事件
-        buts1_click(){
-            //jquery sm搜索点击 shou显示并隐藏
-            $("#my_ipt").removeClass("show");
-            $("#my-ipt1").removeClass("show");
-            $("#ssuo").toggle(); 
-        },    
+            // console.log(h)
+        }, 
     },
     created(){
+        this.HeaderImg();
+        this.get_uname();
         this.changeHeight();
+        // public_img
+        this.publicImg();
           
     },
     mounted(){
-        //window = 搜索sm图标 onclick 隐藏 sm搜索推荐
-	    ($(window)||$("#ssuo")).click(function(){
-	    $("#my-ipt1").removeClass("show");
-	    });  
-    },
-    // watch:{
-    //     $(window).resize(this.changeHeight());
-    // }
-    
+        // 获取导航栏高度动态赋值给页面.mh
+        this.changeHeight();
+        $(window).resize(this.changeHeight);
+        
+    }
 }
 </script>
 <style scoped>
+/*media媒体 大屏*/
+@media (min-width: 992px) {
+   
+    /* 搜索推荐*/
+    .nav_float_right .hov_show .hov_block{
+        background: #fff;
+        width:330px;
+        left:unset;
+        /* right: 9rem; */
+        padding: 1rem;
+    
+    }
+    /*头部导航*/
+    .navigation{
+        background: #000;  
+        /* padding:  0 9rem;    */
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content:space-around;
+    }
+    /* 头部订单中心 */
+    .nav_pills{
+        background: #000;
+        padding:0 9rem;
+    }
+    /* 导航菜单 */
+    /* .hov_block>div .c1{
+        padding:  0 7rem;
+    } */
+   
+
+}
+/*media媒体 中屏*/
+@media (min-width: 768px) and (max-width:991px){
+   
+    /* 搜索推荐*/
+    .nav_float_right .hov_show .hov_block{
+        background: #fff;
+        width:330px;
+        left:unset;
+        /* right: 2rem; */
+        /* border:1px solid #000; */
+        padding: 1rem;
+    
+    }
+   /*头部导航*/
+    .navigation{
+        background: #000;  
+        /* padding:  0 9rem;    */
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content:space-around;
+    }
+     /* 头部订单中心 */
+    .nav_pills{
+        background: #000;
+        padding:0 2rem;
+    }
+     /* 导航菜单 */
+    /* .hov_block>div .c1{
+        padding:  0 1rem;
+    } */
+}
+/*media媒体 小屏*/
+@media (max-width:767px){
+    /* display:none*/
+    .d_sm_none{
+        display:none;
+    }
+    /*头部导航*/
+    .navigation{
+        background: #000;  
+        /* padding:  0 9rem;    */
+        display:flex;
+        flex-direction: column;
+        /* align-items:center; */
+    }
+    /* 搜索推荐*/
+    .nav_float_right .hov_show .hov_block{
+        background: #fff;
+        width:100%;
+        left:0;
+        /* border:1px solid #000; */
+        padding: 1rem;
+    
+    }
+     /* 头部订单中心 */
+    .nav_pills{
+        background: #000;
+        padding: 0 ;
+    }
+     /* 导航菜单 */
+    /* .hov_block>div .c1{
+        padding:0;
+    } */
+}
 /*      高度坍塌*/
 .float-clear:after{
     content: "";
@@ -481,30 +707,14 @@ export default {
     clear: both;
 }
 
-/*顶部图片提示框叉叉*/
-.alert-dismissible .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.1rem 1.5rem;
-    color: inherit;
+.d_inline_block{
+    display:inline-block;
 }
 
-/* 头部背景色透明*/
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
-    background-color:transparent;
-}
-/*头部去边框*/
-.alert{
-    border:0;
-}
 .z_index_999{
     z-index:999;
 }
-/*右上角字体 灰色 */
-.color_rigth_top{
-    color:#c8cbcc;
-}
+
 /*纯黑背景色*/
 .bg_black{
     background-color:#000;
@@ -513,159 +723,206 @@ export default {
 .bg_dark{
     background-color:#1b1b1b;
 }
-/*导航栏字体样式*/
-.navbar .navbar-nav .nav-item .nav-link{
-    font-size:1.2rem;
-    color: #fff;
-}
+
 /* 字体样式8rem*/
 .font_0-8{
     font-size:.8rem;
 }
-/*字体样式1rem*/
-.font_1{
-    font-size:1rem;
-}
-/* 字体样式1.2rem*/
-.font_1-2{
-    font-size:1.2rem;
-}
+
 /* 字体颜色 纯黑*/
-.color_black{
+/* .color_black{
     color: #000;
-}
+} */
 /* 背景雪碧图*/
-.my_bg_r1{
-    width:1rem;height:1.2rem;
-    background:url(./img/icon-new.png);
-    background-position:-150px 0px;
-}
-.my_bg_r2{
-    width:1rem;height:1.2rem;
-    background:url(./img/icon-new.png);
-    background-position:-238px 3px;
-}
-.my_bg_r3{
-    width:1rem;height:1.2rem;
-    background:url(./img/icon-new.png);
-    background-position:-265px 1px;
-}
-.my_bg_r4{
-    width:1rem;height:1.2rem;
-    background:url(./img/icon-new.png);
-    background-position:-353px -1px;
-}
-.my_bg_r4:hover{
-    width:1rem;height:1.2rem;
-    background:url(./img/icon-new.png);
-    background-position:-353px -1px;
-    color: #6610f2;
-}
-.my_bg_r5{
-    width:1.5rem;height:1.5rem;
-    background:url(./img/icon@2x1.png);
-    background-position:-492px -307px;
-}
-.my_bg_r6{
-    width:1.5rem;height:1.5rem;
-    background:url(./img/icon@2x1.png);
-    background-position:-218px -343px;
-}
-.my_bg_r7{
-    width:1.5rem;height:1.5rem;
-    background:url(./img/icon@2x1.png);
-    background-position:-599px -343px;
-}
 .my_bg_r8{
     width:1.5rem;height:1.5rem;
-    background:url(./img/icon@2x1.png);
+    /* background:url(./img/icon@2x1.png); */
     background-position:-324px -341px;
 }
-/* display:none*/
-.d_none{
-    display:none;
-}
-/* a标签hover去下划线 字体颜色 淡白*/ 
-.a_hover:hover{
-    text-decoration:none;
-    color:#c8cbcc;
-}
-/*顶部导航 获取 焦点 字体颜色 淡白 */
-.nav-link:hover, .nav-link:focus{
-    color:#c8cbcc;
-}
-/* 头部搜索框 样式*/
-.input_outline_0{
-    outline:0;border:0;
-    background-image: url(./img/sousuo.png);
-    background-repeat:no-repeat;
-    background-position:-2px -2px;
-    box-sizing:border-box;
-    padding:5px 15px 5px 32px;
-}
-/* sm搜索框 宽度*/
-.w-90 {
-    width: 90% !important;
+.my_bg_r9{
+    width:1.5rem;height:1.5rem;
+    /* background:url(./img/icon.png); */
+    background-position:-176px -86px;
 }
 
-/*hover导航栏sm none 下面的 a标签 字体样式*/
-#c1 a:hover{
+/*hover导航栏导航菜单  */
+.c1 a:hover{
     color:#000;
 }
-#c1 a{
+.c1 a{
     color:#000;
     font-size:.8rem;
 }
+.c1 h6{
+    display: inline-block;
+}
+.c1 .border_bottom{
+    display:block;
+    border-bottom: 1px solid #000;
+    margin-bottom: .5rem;
+    width: 100%;
+}
 
-#c2 a:hover{
+.c1{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    padding: 1rem;
+
+}
+.c1 ul{
+    list-style: none;
+    padding-left:0;
+    margin-bottom:0;
+}
+.c1 ul li a img{
+    width: 100% ;
+}
+/* .hov_show img{
+    width: 100%;
+} */
+
+.c2 a:hover{
     color:#000;
 }
-#c2 a{
+.c2 a{
     text-decoration:underline;
     color:#000;
     font-size:1rem;
+    padding: .3rem .5rem;
 }
-/*media媒体 大屏*/
-@media (min-width: 992px) {
-    /* 头部搜索d-none*/
-    #ssuo{
-        display:none;
-    }
-    /* 搜索推荐*/
-    .flex-container>#my-ipt1{
-        width:330px;
-        right:182px;
-    }
+.c2>ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 0;
+    padding:  2rem 0;
 }
-/*media媒体 中屏*/
-@media (min-width: 768px) and (max-width:991px){
-    /* 头部搜索d-none*/
-    #ssuo{
-        display:none;
-    }
-    /* 搜索推荐*/
-    .flex-container>#my-ipt1{
-        width:330px;
-        right:40px;
-    }
-}
-/*media媒体 小屏*/
-@media (max-width:767px){
-    /* 头部搜索*/
-    #ssuo{
-        display:inline-block;
-    }
-    .d_sm_none{
-        display: none;
-    }
-}
-#ssuo a{
-    display:inline-block;
-}
+
 /* 头部position 固定*/
 .flex-container{
     display: flex;
     flex-direction: row-reverse;
     z-index: 999 !important;
+}
+/*头部导航*/
+/* 导航菜单 */
+.hov_block>div{
+    width: 100%;
+    background: #fff;
+}
+/* 头部搜索框 样式*/
+.navigation>.nav_float_right{
+    /* float: right; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: flex-end; */
+}
+
+.nav_float_right .hov_show div>ul>li>a{
+    color:#000;
+    font-size:.8rem;
+    padding: .3rem .5rem ;
+
+}
+.nav_float_right .hov_show div>ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.nav_float_right .hov_show div>p{
+    display: block;
+    color:#000;
+    font-size:1rem;
+    padding: .3rem .5rem ;
+    font-weight: 400;
+    margin: .3rem 0;
+
+
+}
+.navigation>.nav_float_right input{
+    outline:0;border:0;
+    /* background-image: url(./img/sousuo.png); */
+    background-repeat:no-repeat;
+    background-position:-3px -5px;
+    box-sizing:border-box;
+    padding:.3rem .5rem .3rem 1.8rem;
+    height:1.8rem;
+    font-size: .8rem;
+    color:#333;
+}
+.navigation>.nav_float_left{
+    /* float: left; */
+}
+.nav_float_right>ul{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+.nav_float_right>ul>li{
+    display:inline-block;
+}
+.nav_float_left>ul{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    /* justify-content:space-around; */
+}
+.nav_float_left>ul>li{
+    display:inline-block;
+}
+.hov_show:hover .hov_block{
+    display: block;
+    box-shadow: 0 2px  5px 1px #888888;
+}
+.hov_show>li{
+    display: inline-block;
+    
+}
+.hov_show>a{
+    font-size: 1.1rem;
+    color:#fff;
+    text-decoration: none;
+    padding:0 .8rem;
+    display:block;
+    /* height:100%; */
+    font-weight: 800;
+    line-height:3;
+}
+.hov_block{
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+
+/* 头部订单中心 */
+
+.nav_pills>ul{
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:flex-end;
+    padding: .3rem 0 0 0 ;
+}
+.nav_pills>ul>li{
+    display: inline-block;
+}
+.nav_pills>ul>li>a{
+    color: #fff;
+    font-size: .9rem;
+    padding:.3rem .5rem;
+    text-decoration: none;
+
 }
 </style>

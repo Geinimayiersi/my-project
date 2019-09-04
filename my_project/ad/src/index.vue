@@ -3,203 +3,205 @@
         <HeaderVue>
         </HeaderVue>
         <div class="position-relative">
-            <a href="#" class="d-block"><img src="./img/1920-720-promo-jul.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+            <!-- :src="`${host}${this.homeimg[0].hoem_page1}`" -->
+            <!-- :src="`${host_port}${homeimg[0].hoem_page1}`" -->
+            <a href="javascript:;" class="d-block"><img :src="`${homeimg[0]}`" class="bg_z-index-1 w-100"/></a>
             <div class="r1">
                 <div class=""></div>
-                <a href="#" class="btn_a1 iconfont icon-jiantou1">选购男子折扣</a>
+                <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">选购男子折扣</router-link>
             </div>
             <div class="r1">
                 <div class=""></div>
-                <a href="#" class="btn_a1 iconfont icon-jiantou1">选购女子折扣</a>
+                <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">选购女子折扣</router-link>
             </div>
         </div>
         <div class="position-relative btn_loc1">
-            <a href="#" class="d-block"><img src="./img/1920-720-ym.jpg" alt="" class="bg_z-index-1 w-100 "/></a>
+            <a href="javascript:;" class="d-block"><img :src="`${homeimg[1]}`"  class="bg_z-index-1 w-100 "/></a>
             <div class="r1 r2">
                 <div class=""></div>
-                <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
             </div>
             <div class="r1 r2">
                 <div class=""></div>
-                <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</a>
+                <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</router-link>
             </div>
         </div>
         <div class="row mx-3 mt-4 btn_loc2">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="position-relative">
-                    <a href="#" class="d-block"><img src="./img/eqt-feature-pc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                    <a href="javascript:;" class="d-block"><img :src="`${homeimg[2]}`"  class="bg_z-index-1 w-100"/></a>
                     <div class="r1">
                         <div class=""></div>
-                        <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                        <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12  mt-sm-4 mt-lg-0 mt-md-0">
                 <div class="position-relative">
-                    <a href="#" class="d-block"><img src="./img/kjdc-feature-pc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                    <a href="javascript:;" class="d-block"><img :src="`${homeimg[3]}`"  class="bg_z-index-1 w-100"/></a>
                     <div class="r1">
                         <div class=""></div>
-                        <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                        <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                 <div class="position-relative">
-                    <a href="#" class="d-block"><img src="./img/pwhu-feature-pc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                    <a href="javascript:;" class="d-block"><img :src="`${homeimg[4]}`"  class="bg_z-index-1 w-100"/></a>
                     <div class="r1 r2">
                         <div class=""></div>
-                        <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                        <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                 <div class="position-relative">
-                    <a href="#" class="d-block"><img src="./img/xmp-feature-pc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                    <a href="javascript:;" class="d-block"><img :src="`${homeimg[5]}`"  class="bg_z-index-1 w-100"/></a>
                     <div class="r1 r2">
                         <div class=""></div>
-                        <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                        <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
                     </div>
                 </div>
             </div>
         </div>
         <div class="position-relative mt-4 btn_loc3 ">
-                <a href="#" class="d-block"><img src="./img/1920-720-onthemove-men.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                <a href="javascript:;" class="d-block"><img :src="`${homeimg[6]}`"  class="bg_z-index-1 w-100"/></a>
                 <div class="r1 r2">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
                 </div>
                 <div class="r1 r2">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</a>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</router-link>
                 </div>
         </div>
         <div class="row mx-3 mt-4 btn_loc2">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-blockbustub19.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[7]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12  mt-sm-4 mt-lg-0 mt-md-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-alphaedge4dv1.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[8]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
         </div>
         <div class="position-relative mt-4 btn_loc4 ">
-                <a href="#" class="d-block"><img src="./img/1920-720-aSMC-jul.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                <a href="javascript:;" class="d-block"><img :src="`${homeimg[9]}`"  class="bg_z-index-1 w-100"/></a>
                 <div class="r1">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                    <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                 </div>
                 <div class="r1">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 iconfont icon-jiantou1">了解更多</a>
+                    <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">了解更多</router-link>
                 </div>
         </div>
         <div class="row mx-3 mt-4 btn_loc2">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-br-jul.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[10]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-sm-4 mt-lg-0 mt-md-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-mufc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[11]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-realaway.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a class="d-block"><img :src="`${homeimg[12]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-arsenal-away.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[13]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
         </div>
         <div class="position-relative mt-4 ">
-                <a href="#" class="d-block"><img src="./img/1920-720-bra&tughts.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                <a href="javascript:;" class="d-block"><img :src="`${homeimg[14]}`"  class="bg_z-index-1 w-100"/></a>
                 <div class="r1 r2">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
                 </div>
                 <div class="r1 r2">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</a>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</router-link>
                 </div>
         </div>
         <div class="row mx-3 mt-4 btn_loc2">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-ts4.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[15]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-donissue-new.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                        <div class="r1">
-                            <div class=""></div>
-                            <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div class="position-relative mt-4 ">
-                <a href="#" class="d-block"><img src="./img/1920-720-HOK.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                <div class="r1 r2">
-                    <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
-                </div>
-                <div class="r1 r2">
-                    <div class=""></div>
-                    <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</a>
-                </div>
-        </div>
-        <div class="row mx-3 mt-4 btn_loc2">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/neo-feature-pc.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                        <div class="r1 r2">
-                            <div class=""></div>
-                            <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-sm-4 mt-lg-0 mt-md-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/924-613-asmcxtennis.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[16]}`"  class="bg_z-index-1 w-100"/></a>
+                        <div class="r1">
+                            <div class=""></div>
+                            <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="position-relative mt-4 ">
+                <a href="javascript:;" class="d-block"><img :src="`${homeimg[17]}`"  class="bg_z-index-1 w-100"/></a>
+                <div class="r1 r2">
+                    <div class=""></div>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
+                </div>
+                <div class="r1 r2">
+                    <div class=""></div>
+                    <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">了解更多</router-link>
+                </div>
+        </div>
+        <div class="row mx-3 mt-4 btn_loc2">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="position-relative">
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[18]}`"  class="bg_z-index-1 w-100"/></a>
                         <div class="r1 r2">
                             <div class=""></div>
-                            <a href="#" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</a>
+                            <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-sm-4 mt-lg-0 mt-md-0">
+                    <div class="position-relative">
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[19]}`"  class="bg_z-index-1 w-100"/></a>
+                        <div class="r1 r2">
+                            <div class=""></div>
+                            <router-link to="/Details" class="btn_a1 btn_a2 iconfont icon-jiantou1">立即选购</router-link>
                         </div>
                     </div>
                 </div>
@@ -208,26 +210,26 @@
             <div class="row my-lg-4 my-md-4 my-sm-3 text-center px-lg-5 mx-5" id="boxs" >
                 <div class="col-lg-3 col-md-4 col-sm-4 p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block py-4 px-4 "><img src="./img/eqt-silos.png" alt="" class="bg_z-index-1 w-100"/>
+                        <a href="javascript:;" class="d-block py-4 px-4 "><img :src="`${homeimg[20]}`"  class="bg_z-index-1 w-100"/>
                         <p class="mt-4">EQT GAZELLE</p></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block py-4 px-4"><img src="./img/nj-silo.png" alt="" class="bg_z-index-1 w-100"/>
+                        <a href="javascript:;" class="d-block py-4 px-4"><img :src="`${homeimg[21]}`"  class="bg_z-index-1 w-100"/>
                             <p class="mt-4">NITE JOGGER</p></a>
 
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block py-4 px-4"><img src="./img/ultraboostclima-keysilo.png" alt="" class="bg_z-index-1 w-100"/>
+                        <a href="javascript:;" class="d-block py-4 px-4"><img :src="`${homeimg[22]}`"  class="bg_z-index-1 w-100"/>
                         <p class="mt-4">UltraBOOST CLIMA</p></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 d-sm-none d-lg-block p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block py-4 px-4"><img src="./img/keysilo_ub19_blockbust.png" alt="" class="bg_z-index-1 w-100"/>
+                        <a href="javascript:;" class="d-block py-4 px-4"><img :src="`${homeimg[23]}`"  class="bg_z-index-1 w-100"/>
                         <p class="mt-4">UltraBOOST 19</p></a>
                     </div>
                 </div>
@@ -237,49 +239,49 @@
             <div class="row mx-5 px-lg-5">
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_01.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[24]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_02.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[25]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_03.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[26]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_04.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[27]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_05.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[28]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_06.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[29]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_07.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[30]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6  p-0">
                     <div class="position-relative">
-                        <a href="#" class="d-block"><img src="./img/pcjulUGC-pc_08.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                        <a href="javascript:;" class="d-block"><img :src="`${homeimg[31]}`"  class="bg_z-index-1 w-100"/></a>
                     </div>
                 </div>
             </div>
             <div class="position-relative my-4 btn_loc4">
                 <div class="r1">
                     <div class=""></div>
-                    <a href="#" class="btn_a1 iconfont icon-jiantou1">立即选购</a>
+                    <router-link to="/Details" class="btn_a1 iconfont icon-jiantou1">立即选购</router-link>
                 </div>
             </div>
         </div>
@@ -295,143 +297,49 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[0]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/1561550303961584_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
                                             <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758350123672_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[1]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15572101575808158_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">BBC HU NMD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1899</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15574589832922044_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">alphaedge 4D 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥2499</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15398489878796400_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">个<br>性<br>印<br>制</span>
-                                            <a href="#" class=" mx-3">SUPERSTAR W 经典鞋</a>
-                                            <p class="py-3 mx-3">¥869</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15519559533128923_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">7<br>折</span>
-                                            <a href="#" class=" mx-3">EQT SUPPORT 91/18 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1199</p>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[2]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502551547045_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
                                             <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 w 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15590093741439483_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1499</p>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[3]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/1559875676572808_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758350123672_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -462,143 +370,50 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[4]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15572101575808158_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">BBC HU NMD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1899</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15574589832922044_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">alphaedge 4D 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥2499</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15398489878796400_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
                                             <span class="">个<br>性<br>印<br>制</span>
-                                            <a href="#" class=" mx-3">SUPERSTAR W 经典鞋</a>
-                                            <p class="py-3 mx-3">¥869</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15519559533128923_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">7<br>折</span>
-                                            <a href="#" class=" mx-3">EQT SUPPORT 91/18 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1199</p>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[5]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/1559875676572808_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758350123672_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[6]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/1561550303961584_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
                                             <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758350123672_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
+                                    <div class="col-lg-3 col-md-3 col-sm-3" v-for="(shop1,i) of home_Shop[7]" :key="i">
                                         <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502551547045_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
+                                            <router-link to="/Details" class="d-block pb-2"><img :src="`${host_port}${shop1.home_img}`"  class="bg_z-index-1 w-100"/></router-link>
                                             <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 w 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
+                                            <router-link to="/Details" class=" mx-3" v-text="shop1.p_title1"></router-link>
+                                            <p class="py-3 mx-3" v-text="`￥${shop1.p_price1.toFixed(2)}`"></p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15585758296537379_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">PW SOLARHU PRD 经典鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-4">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15615502793352286_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1399</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 d-lg-block d-md-block d-sm-none">
-                                        <div class="position-relative Carousel_p">
-                                            <a href="#" class="d-block pb-2"><img src="./img/15590093741439483_324X324.jpg" alt="" class="bg_z-index-1 w-100"/></a>
-                                            <span class="">新<br>品</span>
-                                            <a href="#" class=" mx-3">UltraBOOST 19 m 跑步鞋</a>
-                                            <p class="py-3 mx-3">¥1499</p>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -629,7 +444,9 @@ import FooterVue from "./footer.vue"
 export default {
     data(){
         return{
-
+            homeimg:[],
+            host_port:`http://127.0.0.1:3000/`,
+            home_Shop:[],
         }
     },
     components:{
@@ -638,8 +455,33 @@ export default {
         "FooterVue":FooterVue
     },
     methods:{
+        home_page(){
+            this.axios.get("homePage").then(res=>{
+                // console.log(res.data.data[0].hoem_page1);
+                var data=res.data.data;
+                for(var i=0;i<data.length;i++){
+                    this.homeimg.push("http://127.0.0.1:3000/"+data[i].hoem_page1);
+                }
+            })
+            // console.log(this.homeimg);
+        },
+        homeShop(){
+            this.axios.get("homeShop1").then(res=>{
+                var data=res.data.data;
+                for(var i=0;i<data.length;i+=4){
+                    this.home_Shop.push(data.slice(i,i+4));
+                }
+            })
+                // console.log(this.home_Shop);
+        },
+        
 
+    },
+    created(){
+        this.home_page();
+        this.homeShop();
     }
+
 
 }
 </script>
@@ -650,7 +492,11 @@ export default {
     display: block;
     clear: both;
 }
-
+/*头部外边距溢出*/
+/* .mt-overflow:before{
+    content:"";
+    display:table;
+} */
 /*纯黑背景色*/
 .bg_black{
     background-color:#000;
@@ -685,6 +531,7 @@ export default {
     text-decoration:none;
     letter-spacing:3px;
     padding: 0 1.3rem;
+    transform: 1s;
 }
 /* 按钮样式*/
 .btn_a1:hover{
