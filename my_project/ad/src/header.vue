@@ -15,7 +15,17 @@
                     </li>
                     <li >
                         <router-link to="/login" v-show="isLogin" class="iconfont icon-geren">登录注册</router-link>
-                        <a href="javascript:;" name="get_uname" v-show="!isLogin" class="iconfont icon-geren"></a>
+                        <ul class="p-0" v-show="!isLogin">
+                            <li class="logout_show">
+                                <div class="login_none">
+                                    <a href="javascript:;" name="get_uname"  class="iconfont icon-geren "></a>
+                                </div>
+                                <div class="logout_block">
+                                    <a href="javascript:;" class="iconfont icon-geren" @click="logout">注销登录</a>
+                                </div>
+                            </li>
+                        </ul>
+                        
                     </li>
                 </ul>
             </div>
@@ -43,6 +53,9 @@
                                 </ul>
                                 <p>搜索记录</p>
                             </div>
+                        </li>
+                        <li class="hov_show">
+                            <router-link to="/shopCart" class="d-inline-block my_bg_r10 mr-1 align-middle"  :style="{'backgroundImage':`url('${public_img[7]}')`}" title="购物袋"></router-link>
                         </li>
                     </ul>
                 </div>
@@ -202,7 +215,7 @@
                                     <div class="c2" >
                                         <ul>
                                             <li>
-                                                <a href="javascript:;" class="font-weight-bold">女子全部产品</a>
+                                                <router-link to="/Details_list" class="font-weight-bold">女子全部产品</router-link>
                                             </li>
                                             <li>
                                                 <a href="javascript:;" class="font-weight-bold">全部女子鞋</a>
@@ -544,17 +557,17 @@ export default {
         }
     },
     methods:{
-        // 调用公共资源
-        publicImg(){
-                this.axios.get("public_img1").then(res=>{
-                    // console.log(res.data.data[0].details_img1);
-                    var data=res.data.data;
-                    // console.log(data);
-                    for(var i=0;i<data.length;i++){
-                        this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
-                    }
-                })
-                // console.log(this.public_img);
+        //注销用户登录
+        logout(){
+            this.axios.get("logout").then(res=>{
+                if(res.data.code==1){
+                    alert("用户注销成功");
+                    this.get_uname();
+                    this.getCart();
+                }
+            }).catch(err=>{
+                console.log(err);
+            });
         },
         HeaderImg(){
             this.axios.get("header_img1").then(res=>{
@@ -592,7 +605,8 @@ export default {
         this.get_uname();
         this.changeHeight();
         // public_img
-        this.publicImg();
+        this.publicImg(this.public_img);
+        // console.log(123);
           
     },
     mounted(){
@@ -600,7 +614,8 @@ export default {
         this.changeHeight();
         $(window).resize(this.changeHeight);
         
-    }
+    },
+    props:["getCart"]
 }
 </script>
 <style scoped>
@@ -744,6 +759,13 @@ export default {
     /* background:url(./img/icon.png); */
     background-position:-176px -86px;
 }
+.my_bg_r10{
+    width:20px;height:20px;
+    /* background:url(./img/icon-new.png); */
+    background-position:-352px -1px;
+    position: relative;
+    top:12px;
+}
 
 /*hover导航栏导航菜单  */
 .c1 a:hover{
@@ -813,12 +835,12 @@ export default {
     background: #fff;
 }
 /* 头部搜索框 样式*/
-.navigation>.nav_float_right{
-    /* float: right; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: flex-end; */
-}
+/* .navigation>.nav_float_right{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+} */
 
 .nav_float_right .hov_show div>ul>li>a{
     color:#000;
@@ -855,9 +877,9 @@ export default {
     font-size: .8rem;
     color:#333;
 }
-.navigation>.nav_float_left{
-    /* float: left; */
-}
+/* .navigation>.nav_float_left{
+    float: left;
+} */
 .nav_float_right>ul{
     display: flex;
     list-style: none;
@@ -907,7 +929,7 @@ export default {
 
 /* 头部订单中心 */
 
-.nav_pills>ul{
+.nav_pills ul{
     list-style: none;
     margin-bottom: 0;
     display: flex;
@@ -915,14 +937,30 @@ export default {
     justify-content:flex-end;
     padding: .3rem 0 0 0 ;
 }
-.nav_pills>ul>li{
+.nav_pills ul li{
     display: inline-block;
 }
-.nav_pills>ul>li>a{
+.nav_pills ul li a{
     color: #fff;
     font-size: .9rem;
     padding:.3rem .5rem;
     text-decoration: none;
-
 }
+
+.logout_show:hover .logout_block{
+    display:block;
+    background:#fff;
+}
+.logout_show:hover .login_none{
+    display:none!important;
+}
+.logout_show:hover .logout_block a{
+    text-align: center;
+    color:#000;
+    z-index:999;
+}
+.logout_block{
+    display:none;
+}
+
 </style>

@@ -1,16 +1,37 @@
 -- 用户登录
 SET NAMES UTF8;
+DROP DATABASE IF EXISTS login_user,
+CREATE DATABASE adi CHARSET=UTF8;
 use adi,
-DROP TABLE IF EXISTS login_user,
 CREATE TABLE login_user(
   id int PRIMARY KEY AUTO_INCREMENT,
   uname varchar(10),
   upwd varchar(16),
   sex tinyint
-),
+);
 
 INSERT INTO login_user (uname,upwd) VALUES
-("tom","123456"),
+("tom","123456");
+
+
+
+
+-- 购物车
+DROP DATABASE IF EXISTS shopCart,
+CREATE DATABASE adi CHARSET=UTF8;
+use adi,
+CREATE TABLE shopCart(
+  id int PRIMARY KEY AUTO_INCREMENT,
+	pid varchar(8),
+	uid varchar(8),
+  p_count int,
+	pname varchar(255),
+	p_color varchar(32),
+	p_size varchar(32),
+	p_price DECIMAL(6,2)
+);
+
+
 
 -- 详情页
 use adi,
@@ -165,6 +186,45 @@ INSERT INTO hoem_page (hoem_page1) VALUES
 ("home_page/home_page30.png"),
 ("home_page/home_page31.png"),
 ("home_page/home_page32.png");
+
+
+
+
+
+-- 首页图片1
+use adi;
+DROP TABLE IF EXISTS shop_cart;
+CREATE TABLE shop_cart(
+	cart_img VARCHAR(255)
+
+);
+INSERT INTO shop_cart (cart_img) VALUES
+("shop_cart/a01.jpg"),
+("shop_cart/a02.jpg"),
+("shop_cart/a03.jpg"),
+("shop_cart/a04.jpg"),
+("shop_cart/a05.jpg"),
+("shop_cart/video01.mp4");
+
+
+
+
+
+
+-- use adi;
+-- DROP TABLE IF EXISTS shop_carousel;
+-- CREATE TABLE shop_carousel(
+-- 	carousel_img VARCHAR(255)
+
+-- );
+-- INSERT INTO shop_carousel (carousel_img) VALUES
+-- ("shop_carousel/shop_carousel01.png"),
+-- ("shop_carousel/shop_carousel02.png"),
+-- ("shop_carousel/shop_carousel03.png"),
+-- ("shop_carousel/shop_carousel04.png"),
+-- ("shop_carousel/shop_carousel05.png"),
+-- ("shop_carousel/shop_carousel06.png");
+
 
 
 

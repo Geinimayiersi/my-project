@@ -439,8 +439,6 @@
     </div>
 </template>
 <script>
-import HeaderVue from "./header.vue" 
-import FooterVue from "./footer.vue"
 export default {
     data(){
         return{
@@ -448,11 +446,6 @@ export default {
             host_port:`http://127.0.0.1:3000/`,
             home_Shop:[],
         }
-    },
-    components:{
-        //注册子组件
-        "HeaderVue":HeaderVue,
-        "FooterVue":FooterVue
     },
     methods:{
         home_page(){

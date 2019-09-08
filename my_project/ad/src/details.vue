@@ -265,8 +265,6 @@
 
 <script>
 //引入组件
-import HeaderVue from "./header.vue" 
-import FooterVue from "./footer.vue"
 export default {
   data(){
     return{
@@ -298,29 +296,12 @@ export default {
             })
             // console.log(this.details_img);
     },
-    // public_img
-    publicImg(){
-            this.axios.get("public_img1").then(res=>{
-                // console.log(res.data.data[0].details_img1);
-                var data=res.data.data;
-                // console.log(data);
-                for(var i=0;i<data.length;i++){
-                    this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
-                }
-            })
-            // console.log(this.public_img);
-    },
-  },
-  components:{
-        //注册子组件
-        "HeaderVue":HeaderVue,
-        "FooterVue":FooterVue
   },
   created(){
       this.homeShop();
       this.detailsImg();
       // public_img
-      this.publicImg();
+      this.publicImg(this.public_img);
   } 
 }
 </script>

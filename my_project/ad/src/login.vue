@@ -93,8 +93,6 @@
   </div>
 </template>
 <script>
-import HeaderVue from "./header.vue" 
-import FooterVue from "./footer.vue"
 export default {
     data(){
         return {
@@ -108,24 +106,7 @@ export default {
             preg:/^[0-9a-z]{6,16}$/i
         }
     },
-    components:{
-        //注册子组件
-        "HeaderVue":HeaderVue,
-        "FooterVue":FooterVue
-    },
     methods:{
-        // 调用公共资源
-        publicImg(){
-                this.axios.get("public_img1").then(res=>{
-                    // console.log(res.data.data[0].details_img1);
-                    var data=res.data.data;
-                    // console.log(data);
-                    for(var i=0;i<data.length;i++){
-                        this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
-                    }
-                })
-                // console.log(this.public_img);
-        },
         //input输入验证
          vali($txt,reg,msg){
             //  console.log($txt);
@@ -239,7 +220,7 @@ export default {
     },
     created(){
         // public_img
-        this.publicImg();
+       this.publicImg(this.public_img);
     }
     
   

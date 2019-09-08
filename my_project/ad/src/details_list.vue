@@ -170,8 +170,7 @@
 </template>
 
 <script>
-import HeaderVue from "./header.vue" 
-import FooterVue from "./footer.vue"
+
 export default {
   data(){
     return{
@@ -183,18 +182,6 @@ export default {
 
   },
   methods:{
-      // public_img
-    publicImg(){
-            this.axios.get("public_img1").then(res=>{
-                // console.log(res.data.data[0].details_img1);
-                var data=res.data.data;
-                // console.log(data);
-                for(var i=0;i<data.length;i++){
-                    this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
-                }
-            })
-            // console.log(this.public_img);
-    },
     //   页面加载details数据
     list_detail(){
         this.axios.get("listShop").then(res=>{
@@ -239,15 +226,10 @@ export default {
     // console.log(this_img);
     }
   },
-  components:{
-    //注册子组件
-    "HeaderVue":HeaderVue,
-    "FooterVue":FooterVue
-  },
   created(){
       this.list_detail();
       // public_img
-      this.publicImg();
+      this.publicImg(this.public_img);
   }
 }
 </script>

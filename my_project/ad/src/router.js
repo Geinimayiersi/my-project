@@ -8,6 +8,7 @@ import Details_list from "./details_list.vue"
 import HeaderVue from "./header.vue"
 import NotFound from "./file_not_found.vue"
 import ShopDedails from "./shop_dedails.vue"
+import shopCart from "./shopCart.vue"
 // import FooterVue from "./footer.vue"
 
 Vue.use(Router)
@@ -20,7 +21,8 @@ export default new Router({
     {path:'/Details_list',component:Details_list},
     {path:'/Header',component:HeaderVue},
     {path:'/NotFound',component:NotFound},
-    {path:'/ShopDedails',component:ShopDedails}
+    {path:'/ShopDedails',component:ShopDedails},
+    {path:'/shopCart',component:shopCart}
     // {path:'/Footer',component:FooterVue}
   ]
 })

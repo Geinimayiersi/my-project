@@ -129,7 +129,7 @@
             </div>
             <p>尺码指南</p>
             <div class=" mb-1 mt-3">
-              <button class="btn_a1 iconfont icon-jiantou1 w-100">加入购物车</button>
+              <button class="btn_a1 iconfont icon-jiantou1 w-100" @click="addCart">加入购物车</button>
             </div>
           </div>
         </div>
@@ -164,9 +164,6 @@
 </template>
 
 <script>
-// 引入头部脚步路由组件
-import HeaderVue from "./header.vue" 
-import FooterVue from "./footer.vue"
 export default {
   data(){
     return{
@@ -188,12 +185,31 @@ export default {
       Ptitle2:[],
     }
   },
-  components:{
-    //注册子组件
-    "HeaderVue":HeaderVue,
-    "FooterVue":FooterVue
-  },
   methods:{
+    // 商品添加到购物车
+    addCart(){
+      var obj={
+        pid:this.Pid,
+        p_count:this.count,
+        p_color:this.Pcolor,
+        p_size:this.size,
+        p_price:this.Price,
+        pname:this.Pname,
+      } 
+      // console.log(obj);
+      this.axios.get("AddCart",{params:obj}).then(res=>{
+          if(res.data.code==-1){
+              alert("请先登录");
+              this.$router.push("/Login");
+          }else{
+              alert("添加成功");
+          }
+
+      }).catch(err=>{
+          console.log(err);
+      });
+
+    },
     // 下拉选择框
     select_click1(e){
       this.size = e.target.innerHTML;
@@ -201,18 +217,6 @@ export default {
     },
     select_click2(e){
       this.count = e.target.innerHTML;
-    },
-    // 调用公共资源
-    publicImg(){
-            this.axios.get("public_img1").then(res=>{
-                // console.log(res.data.data[0].details_img1);
-                var data=res.data.data;
-                // console.log(data);
-                for(var i=0;i<data.length;i++){
-                    this.public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
-                }
-            })
-            // console.log(this.public_img);
     },
     // 获取页面数据资源
     	ShopdeDails(){
@@ -274,7 +278,7 @@ export default {
   created(){
     this.ShopdeDails();
     // public_img
-    this.publicImg();
+    this.publicImg(this.public_img);
   }
 }
 </script>

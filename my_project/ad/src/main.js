@@ -6,6 +6,18 @@ import "./font/iconfont.css"
 //5:引入axios 第三方ajax模块
 import axios from "axios"
 import qs from 'qs'
+// 注册全局组件头部脚步
+import HeaderVue from "./header.vue" 
+import FooterVue from "./footer.vue"
+
+Vue.component(
+  "HeaderVue",
+  HeaderVue
+)
+Vue.component(
+  "FooterVue",
+  FooterVue
+)
 //6:配置axios 基础路径
 axios.defaults.baseURL="http://127.0.0.1:3000/"
 //7:配置axios 保存session信息
@@ -16,6 +28,32 @@ axios.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded;c
 //由于axios不支持 use 将实例添加vue原型
 Vue.prototype.axios = axios;
 Vue.prototype.qs= qs;
+//绑定公共资源方法到原型对象中
+Vue.prototype.publicImg=function publicImg(public_img){
+    this.axios.get("public_img1").then(res=>{
+        // console.log(res.data.data[0].details_img1);
+        var data=res.data.data;
+        // console.log(data);
+        for(var i=0;i<data.length;i++){
+            public_img.push("http://127.0.0.1:3000/"+data[i].public_img1);
+        }
+    })
+    // console.log(this.public_img);
+},
+
+
+    //获取cart页面数据资源
+    Vue.prototype.ShopCart=function ShopCart(shop_cart){
+      this.axios.get("shop_cart").then(res=>{
+                var data=res.data.data;
+                // console.log(data);
+                for(var i=0;i<data.length;i++){
+                    shop_cart.push("http://127.0.0.1:3000/"+data[i].cart_img);
+                }
+            })
+            // console.log(this.shop_cart);
+    },
+
 //main.js 
 //router跳转页面顶部
 router.afterEach((to,from,next)=>{
