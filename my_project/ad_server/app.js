@@ -92,7 +92,7 @@ server.post("/reg",(req,res)=>{
     if(result.affectedRows>0){
       res.send({code:1,msg:"注册成功"});
     }else{
-      console.log(req.session);
+      // console.log(req.session);
       res.send({code:-1,msg:"注册失败"})    
     }
   })
@@ -178,7 +178,7 @@ server.post("/reg",(req,res)=>{
 //1：get /注销登录
 server.get("/logout",(req,res)=>{
   req.session.destroy();
-  console.log(req.session);
+  // console.log(req.session);
     res.send({code:1,msg:"注销成功"});
   
 });

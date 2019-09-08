@@ -5,7 +5,7 @@ import index from "./index.vue"
 import LoginVue from "./login.vue"
 import Details from "./details.vue"
 import Details_list from "./details_list.vue"
-import HeaderVue from "./header.vue"
+// import HeaderVue from "./header.vue"
 import NotFound from "./file_not_found.vue"
 import ShopDedails from "./shop_dedails.vue"
 import shopCart from "./shopCart.vue"
@@ -19,7 +19,7 @@ export default new Router({
     {path:'/Details',component:Details},
     {path:'/Login',component:LoginVue},
     {path:'/Details_list',component:Details_list},
-    {path:'/Header',component:HeaderVue},
+    // {path:'/Header',component:HeaderVue},
     {path:'/NotFound',component:NotFound},
     {path:'/ShopDedails',component:ShopDedails},
     {path:'/shopCart',component:shopCart}

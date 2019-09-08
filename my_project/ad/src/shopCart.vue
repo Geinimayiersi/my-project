@@ -288,7 +288,7 @@ export default {
             }else{
                 this.islogin=true;
                 for (var i=0;i<data.length;i++){
-                  data[i].cartImg =`http://127.0.0.1:3000/`+data[i].cartImg.split(",")[0];
+                  data[i].cartImg =`http://127.0.0.1:3000/`+(data[i].cartImg.split(",")[0]);
                   data[i].p_price=parseInt(data[i].p_count)*parseInt(data[i].p_price);
                   
                   this.countALL+=parseInt(data[i].p_count);
