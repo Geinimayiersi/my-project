@@ -40,7 +40,6 @@ server.use(bodyParser.urlencoded({
 }));
 //4.1 :配置项目静态目录
 server.use(express.static("public"));
-http://127.0.0.1:3000/01.jpg
 
 //5：启动监听3000
 server.listen(3000);
@@ -153,10 +152,10 @@ server.post("/reg",(req,res)=>{
     if(result.length==0){
       //4：没有购买过此商品
       // console.log(2)
-      sql=`insert into shopCart values(null,'${pid}','${uid}',${p_count},"${pname}",'${p_color}','${p_size}',${p_price});`;
+      sql=`insert into shopCart values(null,'${pid}','${uid}','${p_count}',"${pname}",'${p_color}','${p_size}',${p_price});`;
     }else{
       // console.log(3)
-      sql=`update shopCart set p_count=${p_count},p_size='${p_size}' where uid=${uid} and pid=${pid}`;
+      sql=`update shopCart set p_count="${p_count}",p_size='${p_size}' where uid=${uid} and pid=${pid}`;
     }
     //5：购买过此商品更新
     pool.query(sql,(err,result)=>{

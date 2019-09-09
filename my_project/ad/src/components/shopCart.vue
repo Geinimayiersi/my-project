@@ -282,7 +282,7 @@ export default {
     getCart(){
         this.axios.get("getcart").then(res=>{
             var data=res.data.data;
-            // console.log(data);
+             console.log(data);
             if(res.data.code==-1 || data.length==0){
                 this.islogin=false;
                 this.countALL=0;
@@ -292,7 +292,6 @@ export default {
                 for (var i=0;i<data.length;i++){
                   data[i].cartImg =this.host_port+(data[i].cartImg.split(",")[0]);
                   data[i].p_price=parseInt(data[i].p_count)*parseInt(data[i].p_price);
-                  
                   this.countALL+=parseInt(data[i].p_count);
                   this.priceALL+=parseInt(data[i].p_price);
                 }
