@@ -268,10 +268,10 @@ export default {
       }else{
         var obj={ids:ids};
         this.axios.get("delM",{params:obj}).then(res=>{
-          alert("删除成功");
           this.countALL=0;
           this.priceALL=0;
           this.getCart();
+          alert("删除成功");
         }).catch(err=>{
           console.log(err);
         });
@@ -285,10 +285,12 @@ export default {
             // console.log(data);
             if(res.data.code==-1 || data.length==0){
                 this.islogin=false;
+                this.countALL=0;
+                this.priceALL=0;
             }else{
                 this.islogin=true;
                 for (var i=0;i<data.length;i++){
-                  data[i].cartImg =`http://127.0.0.1:3000/`+(data[i].cartImg.split(",")[0]);
+                  data[i].cartImg =this.host_port+(data[i].cartImg.split(",")[0]);
                   data[i].p_price=parseInt(data[i].p_count)*parseInt(data[i].p_price);
                   
                   this.countALL+=parseInt(data[i].p_count);
@@ -309,8 +311,8 @@ export default {
   },
   created(){
     // public_img
-    this.publicImg(this.public_img);
-    this.ShopCart(this.shop_cart);
+    this.publicImg();
+    this.ShopCart();
     this.getCart();
   }
 }

@@ -88,8 +88,8 @@ export default {
   },
   created(){
       // public_img
-      this.publicImg(this.public_img);
-      this.ShopCart(this.shop_cart);
+      this.publicImg();
+      this.ShopCart();
   }
 }
 </script>

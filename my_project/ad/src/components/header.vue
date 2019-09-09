@@ -62,7 +62,7 @@
                 <div class="nav_float_left">
                     <ul >
                         <li class="hov_show">
-                            <router-link to="/index"><img :src="`${header_img[0]}`" /></router-link>
+                            <router-link to="/"><img :src="`${header_img[0]}`" /></router-link>
                             <!-- hover导航栏sm none-->
                         </li>
                         <li class="hov_show">
@@ -574,7 +574,7 @@ export default {
                 var data=res.data.data;
                 // console.log(data);
                 for(var i=0;i<data.length;i++){
-                    this.header_img.push("http://127.0.0.1:3000/"+data[i].header_img1);
+                    this.header_img.push(this.host_port+(data[i].header_img1));
                 }
             })
                 // console.log(this.header_img);
@@ -586,7 +586,7 @@ export default {
                     this.isLogin=true;
                 }else{
                    var uname=document.getElementsByName("get_uname")[0];
-                   uname.innerHTML=`欢迎 ${res.data.data}`;
+                   uname.innerHTML=res.data.data;
                 }
 
             }).catch(err=>{
@@ -605,7 +605,7 @@ export default {
         this.get_uname();
         this.changeHeight();
         // public_img
-        this.publicImg(this.public_img);
+        this.publicImg();
         // console.log(123);
           
     },

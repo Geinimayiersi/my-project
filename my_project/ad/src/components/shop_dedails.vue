@@ -167,7 +167,6 @@
 export default {
   data(){
     return{
-      host_port:`http://127.0.0.1:3000/`,
       i:0,
       count:"1",
       size:"法国码35.5",
@@ -200,7 +199,6 @@ export default {
       this.axios.get("AddCart",{params:obj}).then(res=>{
           if(res.data.code==-1){
               alert("请先登录");
-              this.$router.push("/Login");
           }else{
               alert("添加成功");
           }
@@ -278,7 +276,7 @@ export default {
   created(){
     this.ShopdeDails();
     // public_img
-    this.publicImg(this.public_img);
+    this.publicImg();
   }
 }
 </script>

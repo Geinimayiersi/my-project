@@ -144,7 +144,7 @@
                     <a href="javascript:;"><img :src="`${public_img[3]}`" /></a>
                     <div  v-for="(shop,i) of list2" :key="i" @mouseover="imgOver" @mouseout="imgOver">
                        <!-- @mouseleave="imgChange()" -->
-                        <router-link :to="{path:'/ShopDedails',query:{pid:shop.pid}}" class="img-chage " ><img :src="`http://127.0.0.1:3000/${shop.p_img1}`" :alt="`http://127.0.0.1:3000/${shop.p_img2}`"/><span>查看详情</span></router-link>
+                        <router-link :to="{path:'/ShopDedails',query:{pid:shop.pid}}" class="img-chage " ><img :src="`${shop.p_img1}`" :alt="`${shop.p_img2}`"/><span>查看详情</span></router-link>
                         <p v-text="shop.p_title"></p>
                         <p v-text="`￥${shop.p_price.toFixed(2)}`"></p>
                     </div>
@@ -155,7 +155,7 @@
                 <div class="details_shop">
                     <div  v-for="(shop,i) of list" :key="i" @mouseover="imgOver" @mouseout="imgOver">
                        <!-- @mouseleave="imgChange()" -->
-                        <router-link :to="{path:'/ShopDedails',query:{pid:shop.pid}}" class="img-chage " ><img :src="`http://127.0.0.1:3000/${shop.p_img1}`" :alt="`http://127.0.0.1:3000/${shop.p_img2}`"/><span>查看详情</span></router-link>
+                        <router-link :to="{path:'/ShopDedails',query:{pid:shop.pid}}" class="img-chage " ><img :src="`${shop.p_img1}`" :alt="`${shop.p_img2}`"/><span>查看详情</span></router-link>
                         <p v-text="shop.p_title"></p>
                         <p v-text="`￥${shop.p_price.toFixed(2)}`"></p>
                     </div>
@@ -188,11 +188,13 @@ export default {
             // console.log(res.data.data[0].pid);
             var data=res.data.data;
             for(var i=0;i<data.length;i++){
-                this.list.push(data[i]);
+                data[i].p_img1=this.host_port+(data[i].p_img1);
+                data[i].p_img2=this.host_port+(data[i].p_img2);
                 if(i==14){
                     this.list2.push(data[i]);
                 }
             }
+            this.list=data;
         })
         // console.log(this.list2);
     },
@@ -229,7 +231,7 @@ export default {
   created(){
       this.list_detail();
       // public_img
-      this.publicImg(this.public_img);
+      this.publicImg();
   }
 }
 </script>

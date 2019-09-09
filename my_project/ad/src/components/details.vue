@@ -268,7 +268,6 @@
 export default {
   data(){
     return{
-      host_port:`http://127.0.0.1:3000/`,
       home_Shop:[],
       details_img:[],
       public_img:[],
@@ -291,7 +290,7 @@ export default {
                 // console.log(res.data.data[0].details_img1);
                 var data=res.data.data;
                 for(var i=0;i<data.length;i++){
-                    this.details_img.push("http://127.0.0.1:3000/"+data[i].details_img1);
+                    this.details_img.push(this.host_port+(data[i].details_img1));
                 }
             })
             // console.log(this.details_img);
@@ -301,7 +300,7 @@ export default {
       this.homeShop();
       this.detailsImg();
       // public_img
-      this.publicImg(this.public_img);
+      this.publicImg();
   } 
 }
 </script>

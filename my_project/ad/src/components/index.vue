@@ -443,7 +443,6 @@ export default {
     data(){
         return{
             homeimg:[],
-            host_port:`http://127.0.0.1:3000/`,
             home_Shop:[],
         }
     },
@@ -453,7 +452,7 @@ export default {
                 // console.log(res.data.data[0].hoem_page1);
                 var data=res.data.data;
                 for(var i=0;i<data.length;i++){
-                    this.homeimg.push("http://127.0.0.1:3000/"+data[i].hoem_page1);
+                    this.homeimg.push(this.host_port+(data[i].hoem_page1));
                 }
             })
             // console.log(this.homeimg);

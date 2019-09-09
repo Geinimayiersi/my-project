@@ -196,7 +196,7 @@ export default {
   },
   created(){
     // public_img
-    this.publicImg(this.public_img);
+    this.publicImg();
   }
 }
 </script>

@@ -184,7 +184,7 @@ export default {
                     }else{
                     alert("登录成功");
                     //跳转首页
-                    this.$router.push("/index");
+                    this.$router.push("/");
                     }
                 }).catch(err=>{
                     console.log(err);
