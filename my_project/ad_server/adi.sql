@@ -24,7 +24,7 @@ CREATE TABLE shopCart(
   id int PRIMARY KEY AUTO_INCREMENT,
 	pid varchar(8),
 	uid varchar(8),
-  p_count varchar(32),
+  p_count int,
 	pname varchar(255),
 	p_color varchar(32),
 	p_size varchar(32),

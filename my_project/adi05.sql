@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2019-09-08 10:45:20
+-- Generation Time: 2019-09-10 03:33:02
 -- 服务器版本： 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -33,6 +33,11 @@ CREATE TABLE IF NOT EXISTS `details_img` (
   `details_img1` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `details_img`
+--
+
+TRUNCATE TABLE `details_img`;
 --
 -- 转存表中的数据 `details_img`
 --
@@ -67,6 +72,11 @@ CREATE TABLE IF NOT EXISTS `details_list` (
   PRIMARY KEY (`pid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `details_list`
+--
+
+TRUNCATE TABLE `details_list`;
 --
 -- 转存表中的数据 `details_list`
 --
@@ -185,6 +195,11 @@ CREATE TABLE IF NOT EXISTS `header_img` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- 插入之前先把表清空（truncate） `header_img`
+--
+
+TRUNCATE TABLE `header_img`;
+--
 -- 转存表中的数据 `header_img`
 --
 
@@ -221,6 +236,11 @@ CREATE TABLE IF NOT EXISTS `hoem_page` (
   `hoem_page1` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `hoem_page`
+--
+
+TRUNCATE TABLE `hoem_page`;
 --
 -- 转存表中的数据 `hoem_page`
 --
@@ -273,6 +293,11 @@ CREATE TABLE IF NOT EXISTS `home_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- 插入之前先把表清空（truncate） `home_shop`
+--
+
+TRUNCATE TABLE `home_shop`;
+--
 -- 转存表中的数据 `home_shop`
 --
 
@@ -323,15 +348,19 @@ CREATE TABLE IF NOT EXISTS `login_user` (
   `upwd` varchar(16) DEFAULT NULL,
   `sex` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `login_user`
+--
+
+TRUNCATE TABLE `login_user`;
 --
 -- 转存表中的数据 `login_user`
 --
 
 INSERT INTO `login_user` (`id`, `uname`, `upwd`, `sex`) VALUES
-(1, 'tom', '123456', NULL),
-(2, '202020', '202020', NULL);
+(5, '369258', '369258', NULL);
 
 -- --------------------------------------------------------
 
@@ -344,6 +373,11 @@ CREATE TABLE IF NOT EXISTS `public_img` (
   `public_img1` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `public_img`
+--
+
+TRUNCATE TABLE `public_img`;
 --
 -- 转存表中的数据 `public_img`
 --
@@ -372,20 +406,25 @@ CREATE TABLE IF NOT EXISTS `shopcart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` varchar(8) DEFAULT NULL,
   `uid` varchar(8) DEFAULT NULL,
-  `p_count` varchar(32) DEFAULT NULL,
+  `p_count` int(11) DEFAULT NULL,
   `pname` varchar(255) DEFAULT NULL,
   `p_color` varchar(32) DEFAULT NULL,
   `p_size` varchar(32) DEFAULT NULL,
   `p_price` decimal(6,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `shopcart`
+--
+
+TRUNCATE TABLE `shopcart`;
 --
 -- 转存表中的数据 `shopcart`
 --
 
 INSERT INTO `shopcart` (`id`, `pid`, `uid`, `p_count`, `pname`, `p_color`, `p_size`, `p_price`) VALUES
-(17, '1', '2', '4', 'PLATFORM TRACE PREMIUM LOGO WN''S', '亮粉色', '法国码39', '999.00');
+(1, '4', '5', 2, 'SUEDE DIAMOND SUPPLY', '天蓝色-白色', '法国码40', '629.00');
 
 -- --------------------------------------------------------
 
@@ -409,6 +448,11 @@ CREATE TABLE IF NOT EXISTS `shopdedails` (
   PRIMARY KEY (`pid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `shopdedails`
+--
+
+TRUNCATE TABLE `shopdedails`;
 --
 -- 转存表中的数据 `shopdedails`
 --
@@ -527,6 +571,11 @@ CREATE TABLE IF NOT EXISTS `shop_cart` (
   `cart_img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- 插入之前先把表清空（truncate） `shop_cart`
+--
+
+TRUNCATE TABLE `shop_cart`;
 --
 -- 转存表中的数据 `shop_cart`
 --

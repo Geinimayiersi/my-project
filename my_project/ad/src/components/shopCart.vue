@@ -282,7 +282,7 @@ export default {
     getCart(){
         this.axios.get("getcart").then(res=>{
             var data=res.data.data;
-             console.log(data);
+            //  console.log(data);
             if(res.data.code==-1 || data.length==0){
                 this.islogin=false;
                 this.countALL=0;

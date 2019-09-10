@@ -178,7 +178,7 @@ export default {
                 return;
             }else{
                 this.axios.get(url,{params:obj}).then(res=>{
-                    console.log(res);
+                    // console.log(res);
                     if(res.data.code==-1){
                     alert("用户名和密码有误");
                     }else{
