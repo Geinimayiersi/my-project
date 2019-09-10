@@ -96,10 +96,7 @@ server.post("/reg",(req,res)=>{
     }
   })
 });
-//测试:
-//(1)启动node app.js
-//(2)
-//http://127.0.0.1:3000/login?uname=tom&upwd=123456
+
 
 
 
@@ -152,10 +149,10 @@ server.post("/reg",(req,res)=>{
     if(result.length==0){
       //4：没有购买过此商品
       // console.log(2)
-      sql=`insert into shopCart values(null,'${pid}','${uid}','${p_count}',"${pname}",'${p_color}','${p_size}',${p_price});`;
+      sql=`insert into shopCart values(null,'${pid}','${uid}',${p_count},"${pname}",'${p_color}','${p_size}',${p_price});`;
     }else{
       // console.log(3)
-      sql=`update shopCart set p_count="${p_count}",p_size='${p_size}' where uid=${uid} and pid=${pid}`;
+      sql=`update shopCart set p_count=${p_count},p_size='${p_size}' where uid=${uid} and pid=${pid}`;
     }
     //5：购买过此商品更新
     pool.query(sql,(err,result)=>{
@@ -301,7 +298,7 @@ server.get("/getcart",(req,res)=>{
 
 
 
-// http://127.0.0.1:3000/delM=2,3
+
   //功能六：删除购物车中指定多个商品
   server.get("/delM",(req,res)=>{
     // (1)参数 ids=4,5     
