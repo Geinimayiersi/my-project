@@ -1,5 +1,23 @@
 
-# 简介
+# 运行项目
+
+    **项目需求xampp**
+    **node.js**
+    **npm **
+    **注入MySQL **
+    文件目录my_project/adi.sql
+
+**server文件夹下cmd命令：**
+1. `npm install`
+2. `node app.js`
+
+**web文件夹下cmd命令：**
+
+1. `npm install`
+2. `npm run serve`
+
+
+
 
 ## 1. 项目描述
 1. 此项目在大学期间做的技术还不成熟
@@ -30,30 +48,10 @@
 
 
 
-# day01 运行项目
-
-**先运行服务器，再打开项目**
-
-    **项目需求xampp**
-    **node.js**
-    **npm **
-
-**server文件夹下cmd命令：**
-
-1. `注入基于node的MySQL 文件目录server/adi.sql`
-2. `node app.js`
-
-**web文件夹下cmd命令：**
-
-1. `npm install`
-2. `npm run serve`
 
 
 
-
-
-
-# day02
+# day01
 ## 1. 项目开发准备
     项目描述
     技术选型
@@ -96,7 +94,7 @@
     接口请求函数封装: 每个后台接口
 
 
-# day03
+# day02
 ## 1. 异步数据
     封装ajax: 
         promise+axios封装ajax请求的函数
@@ -139,7 +137,7 @@
         vuex中是否有
         组件中是否读取
         
-# day04
+# day03
 ## 1. 完成登陆/注册功能
     1). 2种方式
        手机号/短信验证码登陆
@@ -191,7 +189,7 @@
      
     3). vue transition动画
     
-# day05
+# day04
 ## 1. ShopGoods组件
     1). 动态展现列表数据
     2). 基本滑动:
@@ -236,7 +234,7 @@
         子组件调用父组件的方法: 通过props将方法传递给子组件
         父组件调用子组件的方法: 通过ref找到子组件标签对象
 
-# day06
+# day05
 ## 1. ShopRatings组件
     1). 列表的过滤显示
     2). 自定义过滤器
